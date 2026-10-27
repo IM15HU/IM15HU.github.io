@@ -18,16 +18,19 @@ about:
   links:
     - icon: file-earmark-person
       text: CV
-      href: assets/files/Suraj_CV.pdf
+      href: assets/files/Suyash_resume_oct2026.pdf
     - icon: github
       text: GitHub
-      href: https://github.com/suraj1102
+      href: https://github.com/IM15HU
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/surajdayma
+      href: https://www.linkedin.com/in/suyash-prakash-582597246
     - icon: envelope
       text: Email
       href: "mailto:suraj.dayma.ug23@plaksha.edu.in"
+    - icon: youtube
+      text: YouTube
+      href: "https://www.youtube.com/@im15hu"
 listing:
   - id: projects
     contents: projects/index.yml
