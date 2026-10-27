@@ -1,0 +1,129 @@
+---
+title: "University Rover Challenge — Mars Rover"
+subtitle: "Team Lead / CTO · Kalki Robotics Club, Plaksha University · Mar 2025 – Feb 2026"
+description: "Led system-level engineering and early prototype integration for a Mars rover, working across communications, low-level control, autonomous mobility, biosciences, and manipulation."
+categories: [Robotics, Systems Engineering]
+start-date: "Mar 2025"
+end-date: "Feb 2026"
+author:
+  - name: Suyash Prakash
+    url: /
+    affiliation: Plaksha University
+---
+
+## Project Overview
+
+The University Rover Challenge (URC) project involved developing a Mars rover prototype capable of traversing desert-like terrain and carrying out mission tasks.
+
+The rover was envisioned as an integrated robotic platform combining mobility, communications, manipulation, and a biosciences module for life-detection experiments. Its design also included a six-degree-of-freedom manipulator for interacting with the environment.
+
+Unlike a small laboratory robot, a competition rover must operate as a complete system. Mechanical structures, electrical power, embedded control, sensors, communication links, and higher-level autonomy all have to work together.
+
+I served as Team Lead / CTO through Kalki Robotics Club at Plaksha University. My responsibilities included system-level design, establishing project workflows, coordinating technical development, and facilitating the integration of different subsystems during early prototype development.
+
+## System Architecture
+
+The rover was designed around several interconnected subsystems.
+
+### Mobility and Autonomous Navigation
+
+The mobility subsystem was intended to support traversal across uneven, desert-like terrain.
+
+Developing a rover for this environment requires consideration of mechanical capability, motor control, sensing, and the software responsible for translating mission objectives into movement.
+
+My role included contributing to the system-level design and low-level control work needed to support the rover's mobility architecture.
+
+### Manipulation
+
+The rover architecture included a six-degree-of-freedom manipulator for performing competition tasks.
+
+A manipulator adds mechanical and control complexity to a mobile platform. Its joints, actuators, sensing, and control software must be integrated with the rover rather than developed as a completely separate system.
+
+### Biosciences Module
+
+The rover also included a biosciences module intended for life-detection experiments.
+
+This subsystem introduced a different set of requirements from the mobility and communications systems, making coordination between subsystems an important part of the overall engineering effort.
+
+### Communications
+
+The communications subsystem was designed to support remote operation and data exchange between the rover and the ground-control station.
+
+Reliable communication is essential for a remotely supervised autonomous robot, particularly when operating over long distances and in environments where the availability and quality of a wireless link may vary.
+
+I worked on the RF communication module and the rover's communications architecture.
+
+## RF Communications Engineering
+
+I contributed to the design of the rover's RF communication module.
+
+The communication system had to be considered in the context of the rover's overall architecture, including remote control, telemetry, and video transmission requirements.
+
+The project involved planning communication links with different roles, rather than treating all wireless communication as a single undifferentiated connection.
+
+The design process required consideration of the relationship between the radio hardware, antennas, data interfaces, and the wider rover system.
+
+A communications architecture must also account for practical integration requirements: the radio equipment needs suitable power, appropriate interfaces with the onboard electronics, and a configuration compatible with the intended ground-control workflow.
+
+## Low-Level Control
+
+I also worked on the rover's low-level control algorithm.
+
+Low-level control forms the interface between higher-level commands and the physical behaviour of the robot. It is responsible for translating desired actions into commands that can be executed by the hardware.
+
+For a mobile rover, this layer is particularly important because the controller must operate within the limitations of the motors, motor drivers, sensors, and mechanical system.
+
+The low-level control work was part of the broader effort to integrate the rover's mobility hardware with its control architecture.
+
+## System Integration
+
+One of my primary responsibilities was facilitating integration across subsystems during early prototype development.
+
+Subsystems often work independently during initial development but encounter new problems when combined. Electrical interfaces, power requirements, communication protocols, mechanical mounting, and software assumptions can all become integration challenges.
+
+My role involved helping coordinate these interfaces and ensuring that the team's development activities contributed to a coherent rover architecture.
+
+This required looking beyond individual components and considering how the rover behaved as a complete engineering system.
+
+## Team Leadership and Project Management
+
+As Team Lead / CTO, I also worked on the organizational side of engineering.
+
+The project involved multiple technical subsystems, making it necessary to establish timelines, define workflows, and coordinate work across the team.
+
+I helped develop the overall project design, establish development timelines, and facilitate collaboration between subsystem teams.
+
+This responsibility required balancing system-level engineering decisions with practical project constraints, including the need to make progress across several interconnected workstreams.
+
+## Competition Outcome
+
+The team cleared the **Preliminary Design Review for the 2026 season**.
+
+This was an important milestone in the competition process and represented progress toward developing the rover architecture and prototype.
+
+The project provided experience in system-level robotics engineering, where success depends not only on individual technical components but also on how they are designed, coordinated, and integrated.
+
+## My Contributions
+
+- Led system-level design as Team Lead / CTO.
+- Helped establish technical workflows and project timelines.
+- Facilitated integration of the rover's subsystems during early prototype development.
+- Designed the RF communication module.
+- Worked on the low-level rover control algorithm.
+- Coordinated technical development across a multidisciplinary student team.
+
+## What I Learned
+
+The project strengthened my understanding of robotics as a systems-engineering discipline.
+
+A rover combines mechanical design, electronics, embedded systems, communications, sensing, control, and autonomy. Decisions made in one subsystem can directly affect the performance and integration of another.
+
+The experience also developed my ability to coordinate engineering work across a team while maintaining a system-level view of the overall design.
+
+<!-- Suggested images:
+![Mars rover prototype](urc-rover-prototype.webp){width=700}
+![Rover system architecture](urc-system-architecture.webp){width=700}
+![RF communications module](urc-communications.webp){width=700}
+![Rover manipulator](urc-manipulator.webp){width=700}
+-->
+

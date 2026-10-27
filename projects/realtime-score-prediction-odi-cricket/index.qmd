@@ -15,7 +15,7 @@ author:
   - name: Avantika Bansal
     url: https://www.linkedin.com/in/avantika-bansal-9253b3278/
     affiliation: Plaksha University
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---

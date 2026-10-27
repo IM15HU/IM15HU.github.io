@@ -7,7 +7,7 @@ start-date: "Nov 2026"
 author:
   - name: Mokash Soni
     affiliation: Plaksha University
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---

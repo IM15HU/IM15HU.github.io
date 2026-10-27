@@ -1,0 +1,103 @@
+---
+title: "CanSat 2025 — Mechanical Design and Integration"
+subtitle: "Mechanical Lead · Kalki Robotics Club, Plaksha University · Oct 2024 – Feb 2025"
+description: "Led mechanical design for a CanSat competition entry, designing the satellite body, internal structure, and autogyro blades in Fusion 360. The team achieved a 92.4% Preliminary Design Review score."
+categories: [Mechanical Design, CAD]
+start-date: "Oct 2024"
+end-date: "Feb 2025"
+author:
+  - name: Suyash Prakash
+    url: /
+    affiliation: Plaksha University
+---
+
+## Project Overview
+
+The CanSat 2025 competition challenged our team to develop a satellite-sized system capable of descending through the air using autogyro blades while collecting flight data.
+
+The project combined mechanical design, structural packaging, and the integration of a compact aerospace system. Unlike a conventional satellite, a CanSat must operate within strict dimensional constraints while accommodating the structures and components required for its mission.
+
+As Mechanical Lead for the project, I was responsible for developing the mechanical design of the system. My work focused on the satellite body, internal structure, and autogyro blades, with the objective of creating a coherent assembly suitable for the competition requirements.
+
+The project was undertaken through Kalki Robotics Club at Plaksha University under the guidance of Prof. Shashank Tamaskar.
+
+## Design Requirements
+
+The mechanical system had to satisfy two broad requirements.
+
+First, the satellite body and its internal structure needed to accommodate the system's components within the available volume. This required considering component placement, structural packaging, and the relationship between the internal assembly and the external body.
+
+Second, the CanSat needed to descend using autogyro blades. The mechanical design therefore had to accommodate the rotor assembly as part of the overall vehicle configuration.
+
+These requirements made integration an important part of the design process. The external structure, internal layout, and rotor geometry could not be treated as entirely independent components because they all contributed to the final assembly.
+
+## Mechanical Design in Fusion 360
+
+I designed the complete mechanical assembly using Autodesk Fusion 360.
+
+The design work covered three primary areas:
+
+### 1. Satellite Body
+
+The satellite body provided the external structure for the system. Its geometry had to respect the CanSat's packaging constraints while accommodating the internal components.
+
+### 2. Internal Structure
+
+The internal structure was designed to organize and support the components inside the satellite body.
+
+Designing this assembly required considering how the components would fit together and how the internal arrangement would interact with the external structure.
+
+### 3. Autogyro Blades
+
+The autogyro blades formed the descent mechanism for the CanSat.
+
+Their geometry and arrangement were part of the overall mechanical assembly, requiring the rotor system to be considered alongside the body and internal structure.
+
+Developing these components in a common CAD environment allowed the complete assembly to be designed and inspected as a system.
+
+## Assembly and Integration Considerations
+
+A major part of mechanical design is ensuring that individual components work together in the final assembly.
+
+For a compact system such as a CanSat, component placement, available space, interfaces, and the relationship between moving and stationary components are important considerations.
+
+Working on the complete assembly provided experience in managing these relationships through CAD rather than designing each component independently.
+
+It also highlighted the importance of considering the final physical system early in the design process.
+
+## Competition Design Review
+
+The team achieved a **92.4% score in the Preliminary Design Review (PDR)**.
+
+The PDR provided an opportunity to present and evaluate the proposed system design against the competition's requirements.
+
+This result was an important milestone for the team and reflected the work invested in developing the competition entry.
+
+## My Contributions
+
+- Led the mechanical design work for the CanSat.
+- Designed the satellite body and internal structure in Fusion 360.
+- Designed the autogyro blades as part of the complete assembly.
+- Worked on integrating the mechanical components into a coherent system.
+- Contributed to the team's preparation for the competition's design review.
+
+## Key Outcomes
+
+- Completed the CAD design of the principal mechanical assemblies.
+- Developed a complete mechanical design for the competition entry.
+- Achieved a team PDR score of 92.4%.
+
+## What I Learned
+
+The project strengthened my understanding of mechanical system design under packaging constraints.
+
+It also reinforced the importance of assembly-level thinking. A successful mechanical design must account for the interfaces between components, the available space, and the requirements of the overall system.
+
+Working as Mechanical Lead gave me experience in taking responsibility for a defined technical subsystem while contributing to a larger multidisciplinary competition project.
+
+<!-- Suggested images:
+![CanSat complete CAD assembly](cansat-cad-assembly.webp){width=700}
+![Satellite body and internal structure](cansat-internal-structure.webp){width=700}
+![Autogyro blade design](cansat-autogyro.webp){width=700}
+-->
+

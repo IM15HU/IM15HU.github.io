@@ -8,7 +8,7 @@ end-date: "May 2026"
 github: https://github.com/S-rg/TeensyGuitarPedal
 no-page-link: true
 author:
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---

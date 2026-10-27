@@ -8,7 +8,7 @@ start-date: "Sep 2025"
 end-date: "Dec 2025"
 no-page-link: true
 author:
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---

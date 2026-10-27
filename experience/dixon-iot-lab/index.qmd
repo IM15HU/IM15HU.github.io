@@ -34,4 +34,4 @@ You can read a more detailed description of the problem and the work conducted s
 
 ### Publication
 
-Kapoor A, Dayma S, Narula M, Srinivasan S. *A Framework for High-Resolution Air Quality Monitoring for the Chandigarh Tricity Region*. [15th International Conference on Air Quality – Science and Application](https://www.air-quality-conference.org/prague2026/abstracts.html).
+Kapoor A, Prakash S, Narula M, Srinivasan S. *A Framework for High-Resolution Air Quality Monitoring for the Chandigarh Tricity Region*. [15th International Conference on Air Quality – Science and Application](https://www.air-quality-conference.org/prague2026/abstracts.html).

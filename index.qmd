@@ -1,6 +1,6 @@
 ---
-title: "Suraj Dayma"
-pagetitle: "Suraj Dayma"
+title: "Suyash Prakash"
+pagetitle: "Suyash Prakash"
 # The listing's content is templated client-side (via the EJS card), so
 # Quarto can't statically scan it for math and defaults to shipping the
 # MathJax + polyfill bundle from two external CDNs "just in case". Nothing

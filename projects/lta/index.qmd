@@ -6,7 +6,7 @@ categories: [Modelling, System Design]
 start-date: "Jan 2025"
 end-date: "May 2025"
 author:
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---

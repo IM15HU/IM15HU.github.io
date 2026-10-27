@@ -19,9 +19,9 @@ project:
     - "**/*.mp4"
 
 website:
-  title: "Suraj Dayma"
+  title: "Suyash Prakash"
   description: "B.Tech. student in Robotics and Autonomous Systems at Plaksha University, working on control systems, machine learning, and IoT for urban monitoring."
-  site-url: "https://suraj1102.github.io"
+  site-url: "https://im15hu.github.io"
   favicon: assets/img/favicon.png
   open-graph: true
   # No navbar or sidebar: the site is a single page plus detail pages.

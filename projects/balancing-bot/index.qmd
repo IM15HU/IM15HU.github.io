@@ -5,7 +5,7 @@ description: "A cart-pole-inspired self-balancing robot using an IMU and stepper
 categories: [State Estimation, Control Theory]
 start-date: "Apr 2025"
 author:
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---

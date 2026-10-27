@@ -1,4 +1,4 @@
-# suraj1102.github.io
+# IM15HU.github.io
 
 Personal site, built with [Quarto](https://quarto.org) and deployed to GitHub
 Pages by the workflow in `.github/workflows/publish.yml` on every push to `main`.
@@ -40,7 +40,7 @@ order: 8                              # controls position in the grid
 image: thumb.webp                     # optional; card degrades to text if absent
 image-alt: "Description of the image"
 author:
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
 ---
