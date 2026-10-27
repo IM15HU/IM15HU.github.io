@@ -1,0 +1,241 @@
+---
+title: "Data-Driven Feedforward Motor Modeling"
+subtitle: "B.Tech Engineering Project · Prof. Andy Ruina · Jan 2026 – Present"
+description: "Developing an experimentally informed inverse model of a DC motor through synchronized measurements, motor characterization, deadband analysis, and comparisons between lookup tables, neural networks, and physics-informed modeling."
+categories: [Motor Control, Modelling, System Identification]
+start-date: "Jan 2026"
+end-date: "Present"
+author:
+  - name: Suyash Prakash
+    url: /
+    affiliation: Plaksha University
+---
+
+## Gallery
+
+::: {.project-gallery}
+<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_1</span></div>
+<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_2</span></div>
+<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_3</span></div>
+<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_4</span></div>
+<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_5</span></div>
+:::
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const galleries = document.querySelectorAll('.project-gallery');
+  galleries.forEach(g => {
+    g.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0 && !e.shiftKey) {
+        const atStart = g.scrollLeft <= 0 && e.deltaY < 0;
+        const atEnd = g.scrollLeft + g.clientWidth >= g.scrollWidth - 1 && e.deltaY > 0;
+        if (!atStart && !atEnd) {
+          e.preventDefault();
+          g.scrollLeft += e.deltaY;
+        }
+      }
+    }, { passive: false });
+  });
+});
+</script>
+```
+
+## Project Overview
+
+This project investigates how experimental measurements can be used to develop an accurate feedforward model of a DC motor.
+
+DC motors are widely used in robotics, automation, and electromechanical systems. However, their real-world behaviour is more complicated than a simple relationship between input voltage and output speed.
+
+Factors such as friction, gearbox behaviour, motor loading, deadband, temperature, and differences between increasing and decreasing commands can introduce nonlinearities into the input-output relationship.
+
+These effects become important when an actuator must respond predictably to a desired command. A controller may know the output it wants to achieve, but determining the input required to produce that output is not always straightforward.
+
+The objective of this project is to characterize the motor experimentally and develop an inverse feedforward model that can estimate the command required to achieve a desired motor output.
+
+Rather than relying exclusively on an idealized motor equation, the approach uses experimentally acquired data to capture aspects of the real actuator's behaviour.
+
+## Motivation: Why Model a Motor?
+
+A motor is often treated as an actuator that converts an electrical input into mechanical motion.
+
+In practice, the relationship between the command and the resulting motion depends on several physical effects.
+
+For example, a motor may not begin rotating until the applied command exceeds a minimum threshold. Once moving, it may behave differently from how it behaves at startup. Changes in load can also alter the output produced by a given command.
+
+A gearbox introduces additional effects, including friction, mechanical play, and backlash.
+
+These behaviours can make precise positioning and speed control difficult, particularly when the actuator must operate over a broad range of commands and loads.
+
+An experimentally derived model can help characterize these effects and provide a better estimate of the input required for a desired output.
+
+## Feedforward and Inverse Modeling
+
+The central idea is to develop a mapping between a desired motor output and the input needed to produce it.
+
+A conventional forward model describes the relationship
+
+$$
+y = f(u)
+$$
+
+where:
+
+- $u$ represents the motor command or input.
+- $y$ represents the resulting motor output.
+- $f$ represents the motor's input-output relationship.
+
+Depending on the experiment, the output may include speed or another measured quantity.
+
+The inverse model seeks the input required to achieve a desired output:
+
+$$
+u = f^{-1}(y_{\mathrm{desired}})
+$$
+
+In a practical system, the relationship may not have a simple analytical inverse. It may also be affected by deadband, hysteresis, measurement noise, or operating conditions.
+
+The project therefore investigates data-driven methods for approximating this inverse relationship using experimental measurements.
+
+A feedforward model can then provide an initial command based on the desired output, while a feedback controller can compensate for residual errors and disturbances.
+
+## Experimental Motor Characterization
+
+A major part of the project involves developing an experimental setup capable of acquiring synchronized electromechanical measurements.
+
+The measurements being investigated include:
+
+- **Torque:** To characterize the mechanical output produced by the motor.
+- **Speed:** To observe the motor's rotational response under different operating conditions.
+- **Current:** To measure electrical demand and investigate its relationship with load and motor behaviour.
+- **Voltage:** To record the electrical input supplied to the actuator.
+- **Temperature:** To observe thermal changes during operation.
+- **Gearbox backlash:** To investigate mechanical play in the transmission.
+
+Collecting these measurements together is important because motor behaviour cannot always be understood from a single variable.
+
+For example, a speed measurement alone may not reveal whether a change in performance is associated with an electrical input, a change in load, or a thermal effect.
+
+Synchronized measurements make it possible to compare variables under corresponding operating conditions.
+
+## Instrumentation Design
+
+The instrumentation is being designed to acquire the relevant measurements in a consistent and repeatable way.
+
+This requires attention not only to the sensors themselves but also to the complete measurement process.
+
+The setup must provide a meaningful relationship between the recorded input and the resulting motor response. Timing, sampling, sensor calibration, and the handling of measurement noise can all affect the usefulness of the collected data.
+
+The objective is to build an experimental dataset suitable for analyzing the motor's behaviour and training or fitting candidate models.
+
+The instrumentation stage is therefore a central part of the modeling process rather than a separate preliminary exercise.
+
+## Deadband and Nonlinear Motor Behaviour
+
+One of the behaviours being investigated is motor deadband.
+
+Deadband refers to a region of the input-command range in which changes in the command produce little or no meaningful output.
+
+For a motor, this may occur because the applied input is insufficient to overcome the combined effects of static friction, gearbox friction, and other mechanical or electrical limitations.
+
+The precise threshold can depend on operating conditions, including the load and the direction of motion.
+
+Identifying deadband is important because an inverse model cannot reliably predict an output if it assumes that every small command produces a proportional response.
+
+The experimental workflow therefore includes investigating the minimum effective command and characterizing the motor's response across the input range.
+
+## Candidate Modeling Approaches
+
+The project investigates and compares multiple approaches to constructing the inverse model.
+
+### 1. Lookup Tables
+
+A lookup table represents experimentally measured relationships as a collection of input-output pairs.
+
+To estimate a command for a desired output, the model can use measured data points and an appropriate interpolation strategy.
+
+Lookup tables are useful when the measured relationship is nonlinear but can be sampled sufficiently densely.
+
+Their advantages include simplicity, interpretability, and relatively low computational cost.
+
+Their limitations include dependence on data coverage and the need to handle operating regions that were not measured directly.
+
+### 2. Neural Networks
+
+Neural networks can learn nonlinear relationships from experimental data.
+
+For this project, a neural network may be used to approximate the mapping from a desired motor output to the required command.
+
+The usefulness of this approach depends on the quality and coverage of the dataset, the model architecture, and the training procedure.
+
+A neural network may capture complex relationships, but it can also behave unpredictably outside the operating conditions represented in the training data.
+
+### 3. Physics-Informed Machine Learning
+
+Physics-informed approaches combine experimental observations with knowledge of the underlying physical system.
+
+For motor modeling, this can provide a way to incorporate known electromechanical relationships while allowing the model to represent behaviour that is difficult to capture with a simple analytical equation.
+
+The objective is to investigate whether incorporating physical knowledge can improve the accuracy, consistency, or generalization of the inverse model.
+
+## Model Evaluation
+
+The candidate approaches need to be evaluated using consistent experimental data and comparable performance measures.
+
+Important questions include:
+
+- How accurately does the model predict the command required for a desired output?
+- How does its accuracy vary across the operating range?
+- Can it represent the motor's deadband and nonlinear response?
+- How well does it generalize to measurements not used during model fitting?
+- How much computation is required to evaluate the model?
+- How reliably can it be used in a real control system?
+
+A model that fits the training measurements well is not necessarily the most useful model for control. It must also behave sensibly across the intended operating range and be practical to implement.
+
+The final choice should therefore consider both predictive accuracy and suitability for real-time control.
+
+## Intended Application
+
+The intended outcome is an inverse feedforward model that can provide a useful motor command for a desired output.
+
+Such a model could be used alongside a feedback controller in a robotic actuator or positioning mechanism.
+
+The feedforward component would estimate the command required to achieve the target, while feedback would correct errors arising from disturbances, model inaccuracies, and changing operating conditions.
+
+The effectiveness of this approach will depend on the model's accuracy and the operating conditions under which it is used.
+
+## Current Status and Future Work
+
+The project is ongoing.
+
+The current work focuses on developing the instrumentation, acquiring synchronized measurements, investigating motor deadband, and comparing candidate data-driven modeling techniques.
+
+The next stages involve completing the experimental dataset, fitting and evaluating the candidate models, comparing their performance, and investigating their use in a control application.
+
+## Key Technical Areas
+
+- Experimental system identification
+- DC motor characterization
+- Electromechanical instrumentation
+- Data acquisition and synchronization
+- Nonlinear system modeling
+- Deadband and gearbox backlash analysis
+- Inverse modeling and feedforward control
+- Lookup tables, neural networks, and physics-informed approaches
+
+## What I Aim to Learn
+
+This project connects physical experimentation with mathematical modeling and control engineering.
+
+It provides an opportunity to investigate how real actuator behaviour can be measured, represented mathematically, and used to improve the performance of a control system.
+
+The broader objective is to develop a modeling workflow in which experimental evidence, physical understanding, and data-driven techniques complement one another.
+
+<!-- Suggested images:
+![Motor characterization test rig](motor-test-rig.webp){width=700}
+![Instrumentation and measurement setup](motor-instrumentation.webp){width=700}
+![Example synchronized measurement traces](motor-measurements.webp){width=700}
+![Comparison of candidate inverse models](inverse-model-comparison.webp){width=700}
+-->
+
