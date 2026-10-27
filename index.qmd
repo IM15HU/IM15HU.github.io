@@ -27,7 +27,7 @@ about:
       href: https://www.linkedin.com/in/suyash-prakash-582597246
     - icon: envelope
       text: Email
-      href: "mailto:suraj.dayma.ug23@plaksha.edu.in"
+      href: "mailto:suyash.chd@gmail.com"
     - icon: youtube
       text: YouTube
       href: "https://www.youtube.com/@im15hu"
