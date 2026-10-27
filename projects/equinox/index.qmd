@@ -6,9 +6,9 @@ categories: [Mechanical Design, Hardware]
 start-date: "Oct 2022"
 end-date: "Oct 2025"
 author:
-  - name: Suraj Dayma
+  - name: Suyash Prakash
     url: /
-    affiliation: Plaksha University
+    affiliation: Self
 ---
 
 ## Project Overview
