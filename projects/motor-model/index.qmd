@@ -13,12 +13,42 @@ author:
 
 ## Gallery
 
-::: {.project-gallery}
-<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_1</span></div>
-<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_2</span></div>
-<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_3</span></div>
-<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_4</span></div>
-<div class="gallery-placeholder"><i class="bi bi-image placeholder-icon"></i><span>gallery_imgs/image_5</span></div>
+::: {.project-gallery #motor-gallery}
+```{=html}
+<script>
+  // All images found in gallery_imgs/
+  const galleryImages = [
+    "1000000212.jpeg",
+    "1000000290.jpeg",
+    "1000000293.jpeg",
+    "1000001049.jpg",
+    "1000001050.jpg",
+    "1000001055.jpg",
+    "1000001056.jpg"
+  ];
+
+  const gallery = document.getElementById('motor-gallery') || document.querySelector('.project-gallery');
+  galleryImages.forEach(filename => {
+    const img = document.createElement('img');
+    img.src = `gallery_imgs/${filename}`;
+    img.alt = filename;
+    img.loading = 'lazy';
+    img.title = 'Click to view full resolution';
+    img.style.cursor = 'pointer';
+    img.onclick = () => window.open(img.src, '_blank');
+    gallery.appendChild(img);
+  });
+</script>
+<noscript>
+  <img src="gallery_imgs/1000000212.jpeg" alt="Gallery image" loading="lazy" />
+  <img src="gallery_imgs/1000000290.jpeg" alt="Gallery image" loading="lazy" />
+  <img src="gallery_imgs/1000000293.jpeg" alt="Gallery image" loading="lazy" />
+  <img src="gallery_imgs/1000001049.jpg" alt="Gallery image" loading="lazy" />
+  <img src="gallery_imgs/1000001050.jpg" alt="Gallery image" loading="lazy" />
+  <img src="gallery_imgs/1000001055.jpg" alt="Gallery image" loading="lazy" />
+  <img src="gallery_imgs/1000001056.jpg" alt="Gallery image" loading="lazy" />
+</noscript>
+```
 :::
 
 ```{=html}
