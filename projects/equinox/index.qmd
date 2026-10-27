@@ -1,0 +1,100 @@
+---
+title: "Equinox — FPV Drone Frame Design"
+subtitle: "Independent Engineering Project · Oct 2022 – Oct 2025"
+description: "Designed and commercialized a patented T300 carbon-fibre FPV drone frame, combining mechanical design, structural considerations, fabrication, flight testing, and product development."
+categories: [Mechanical Design, Hardware]
+start-date: "Oct 2022"
+end-date: "Oct 2025"
+author:
+  - name: Suraj Dayma
+    url: /
+    affiliation: Plaksha University
+---
+
+## Project Overview
+
+Equinox was an independent engineering project through which I designed and commercialized a custom carbon-fibre frame for FPV drones. The project combined my experience as an FPV freestyle pilot with my interest in mechanical design, structural engineering, and product development.
+
+An FPV drone frame is more than a structure that holds the motors and electronics together. Its geometry, stiffness, mass distribution, and vibration characteristics influence the behaviour of the aircraft. The frame must provide sufficient structural rigidity while remaining lightweight and practical to manufacture.
+
+My experience flying and building FPV drones provided a practical foundation for approaching these design considerations. Instead of treating the frame as an isolated CAD exercise, I approached it as a product intended for real-world use by FPV pilots.
+
+The result was Equinox, a custom frame designed in CAD, fabricated using T300 carbon fibre, registered with the Indian Patent Office, and commercialized in the Indian market.
+
+## Design Objectives
+
+The primary objective was to develop a custom FPV drone frame that could be manufactured and used as a physical product rather than remaining a digital design.
+
+The development process involved several interconnected considerations:
+
+- **Mechanical design:** Developing the frame geometry and component layout in CAD.
+- **Structural rigidity:** Considering how the frame geometry and material affect structural behaviour.
+- **Weight:** Balancing structural requirements with the mass constraints of an FPV aircraft.
+- **Manufacturability:** Developing a design that could be fabricated using carbon-fibre manufacturing processes.
+- **Practical usability:** Drawing on experience with drone assembly, flight behaviour, and pilot requirements.
+
+These considerations influenced the design process and the transition from the digital model to a commercially available product.
+
+## Mechanical Design and CAD
+
+I developed the frame geometry using CAD, translating the requirements of an FPV aircraft into a physical structural layout.
+
+The design process involved considering the relationship between the frame's geometry, component mounting locations, structural members, and the requirements of a complete drone assembly.
+
+My experience as a pilot also informed the design perspective. Practical experience with drone setup and flight behaviour provides a different understanding of frame requirements than CAD modelling alone, particularly when considering stiffness, mechanical resonance, and the effects of vibration.
+
+The frame was designed with carbon-fibre fabrication in mind, so the final geometry had to be suitable for manufacturing rather than simply optimized for appearance in a CAD environment.
+
+## Material Selection and Fabrication
+
+The frame was fabricated using T300 carbon fibre, a material commonly used in lightweight structural applications.
+
+Carbon-fibre composites are attractive for FPV frames because of their high stiffness-to-weight potential. However, the behaviour of a finished component also depends on its geometry, laminate construction, fibre orientation, and manufacturing quality.
+
+I coordinated the fabrication of the frame in China, taking the project beyond CAD and into physical production.
+
+This stage introduced practical product-development considerations, including communicating a design for manufacturing and ensuring that the digital design could be translated into a usable physical component.
+
+## Flight Experience and Mechanical Analysis
+
+My background as an FPV freestyle pilot contributed directly to my approach to frame design and drone performance.
+
+I have also worked with blackbox flight data to investigate mechanical resonance and improve drone setup. Blackbox data can help identify oscillations and vibration patterns that may be difficult to distinguish from flight behaviour alone.
+
+Mechanical resonance is particularly relevant to multirotor aircraft because motor excitation, propeller imbalance, and structural flexibility can introduce vibrations into the system. These vibrations may affect the quality of sensor measurements and complicate flight-controller tuning.
+
+I also mentored beginner pilots in PID tuning, developing practical experience in diagnosing flight-control behaviour and understanding the interaction between the airframe and its control system.
+
+## Product Development and Commercialization
+
+Equinox was developed as a commercial product, not solely as a personal prototype.
+
+The project required moving from a digital design to fabrication and then introducing the finished frame to the Indian FPV market. This provided experience with the practical considerations involved in bringing a physical engineering product to customers.
+
+The frame was successfully commercialized, with 15 units sold in the Indian market.
+
+The design was registered with the Indian Patent Office under Design No. 392685-001.
+
+## Key Outcomes
+
+- Designed a custom FPV drone frame in CAD.
+- Developed the design for T300 carbon-fibre fabrication.
+- Coordinated physical manufacturing in China.
+- Registered the design with the Indian Patent Office.
+- Sold 15 units in the Indian market.
+- Applied practical FPV flight experience to mechanical design and drone-performance analysis.
+
+## What I Learned
+
+This project connected mechanical design with the realities of manufacturing and product development.
+
+It strengthened my understanding of how engineering decisions must account for more than the geometry of a CAD model. Material behaviour, fabrication constraints, assembly requirements, vibration, usability, and commercial viability all influence whether a design succeeds as a product.
+
+It also reinforced the value of combining hands-on experience with engineering tools: practical knowledge of FPV aircraft helped inform the design, while CAD and fabrication enabled that knowledge to become a physical product.
+
+<!-- Suggested images:
+![Equinox frame CAD model](fpv-frame-cad.webp){width=700}
+![Fabricated Equinox carbon-fibre frame](fpv-frame-built.webp){width=700}
+![Complete FPV drone assembly](fpv-drone-assembly.webp){width=700}
+-->
+
