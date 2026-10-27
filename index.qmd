@@ -12,7 +12,7 @@ format:
 about:
   id: intro
   template: solana
-  image: assets/img/suyash_pfp.JPEG
+  image: assets/img/suyash_pfpp.webp
   image-shape: round
   image-width: 190px
   links:
