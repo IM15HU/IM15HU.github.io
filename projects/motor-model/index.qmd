@@ -11,66 +11,6 @@ author:
     affiliation: Plaksha University
 ---
 
-## Gallery
-
-::: {.project-gallery #motor-gallery}
-```{=html}
-<script>
-  // All images found in gallery_imgs/
-  const galleryImages = [
-    "1000000212.jpeg",
-    "1000000290.jpeg",
-    "1000000293.jpeg",
-    "1000001049.jpg",
-    "1000001050.jpg",
-    "1000001055.jpg",
-    "1000001056.jpg"
-  ];
-
-  const gallery = document.getElementById('motor-gallery') || document.querySelector('.project-gallery');
-  galleryImages.forEach(filename => {
-    const img = document.createElement('img');
-    img.src = `gallery_imgs/${filename}`;
-    img.alt = filename;
-    img.loading = 'lazy';
-    img.title = 'Click to view full resolution';
-    img.style.cursor = 'pointer';
-    img.onclick = () => window.open(img.src, '_blank');
-    gallery.appendChild(img);
-  });
-</script>
-<noscript>
-  <img src="gallery_imgs/1000000212.jpeg" alt="Gallery image" loading="lazy" />
-  <img src="gallery_imgs/1000000290.jpeg" alt="Gallery image" loading="lazy" />
-  <img src="gallery_imgs/1000000293.jpeg" alt="Gallery image" loading="lazy" />
-  <img src="gallery_imgs/1000001049.jpg" alt="Gallery image" loading="lazy" />
-  <img src="gallery_imgs/1000001050.jpg" alt="Gallery image" loading="lazy" />
-  <img src="gallery_imgs/1000001055.jpg" alt="Gallery image" loading="lazy" />
-  <img src="gallery_imgs/1000001056.jpg" alt="Gallery image" loading="lazy" />
-</noscript>
-```
-:::
-
-```{=html}
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const galleries = document.querySelectorAll('.project-gallery');
-  galleries.forEach(g => {
-    g.addEventListener('wheel', (e) => {
-      if (e.deltaY !== 0 && !e.shiftKey) {
-        const atStart = g.scrollLeft <= 0 && e.deltaY < 0;
-        const atEnd = g.scrollLeft + g.clientWidth >= g.scrollWidth - 1 && e.deltaY > 0;
-        if (!atStart && !atEnd) {
-          e.preventDefault();
-          g.scrollLeft += e.deltaY;
-        }
-      }
-    }, { passive: false });
-  });
-});
-</script>
-```
-
 ## Project Overview
 
 This project investigates how experimental measurements can be used to develop an accurate feedforward model of a DC motor.
@@ -269,3 +209,100 @@ The broader objective is to develop a modeling workflow in which experimental ev
 ![Comparison of candidate inverse models](inverse-model-comparison.webp){width=700}
 -->
 
+## Gallery
+
+```{=html}
+<div class="project-gallery-wrapper">
+  <div class="project-gallery" id="motor-gallery"></div>
+</div>
+<div class="gallery-dots" id="motor-gallery-dots"></div>
+
+<script>
+(function () {
+  const images = [
+    "1000000212.jpeg",
+    "1000000290.jpeg",
+    "1000000293.jpeg",
+    "1000001049.jpg",
+    "1000001050.jpg",
+    "1000001055.jpg",
+    "1000001056.jpg"
+  ];
+
+  /* noscript fallbacks so Quarto's resource scanner sees the files */
+  /* noscript:
+    gallery_imgs/1000000212.jpeg
+    gallery_imgs/1000000290.jpeg
+    gallery_imgs/1000000293.jpeg
+    gallery_imgs/1000001049.jpg
+    gallery_imgs/1000001050.jpg
+    gallery_imgs/1000001055.jpg
+    gallery_imgs/1000001056.jpg
+  */
+
+  const PER_PAGE = 4; // 2x2
+  const gallery  = document.getElementById('motor-gallery');
+  const dotsEl   = document.getElementById('motor-gallery-dots');
+
+  // Chunk images into pages of 4
+  const pages = [];
+  for (let i = 0; i < images.length; i += PER_PAGE) {
+    pages.push(images.slice(i, i + PER_PAGE));
+  }
+
+  // Build pages
+  pages.forEach((pageImgs, pi) => {
+    const page = document.createElement('div');
+    page.className = 'gallery-page';
+
+    pageImgs.forEach(filename => {
+      const img = document.createElement('img');
+      img.src     = `gallery_imgs/${filename}`;
+      img.alt     = filename;
+      img.loading = 'lazy';
+      img.title   = 'Click to open full resolution';
+      img.onclick = () => window.open(img.src, '_blank');
+      page.appendChild(img);
+    });
+
+    // If last page has < 4 images, fill blanks so grid stays even
+    for (let j = pageImgs.length; j < PER_PAGE; j++) {
+      const blank = document.createElement('div');
+      blank.className = 'gallery-placeholder';
+      page.appendChild(blank);
+    }
+
+    gallery.appendChild(page);
+  });
+
+  // Dot indicators
+  const dots = pages.map((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', `Go to page ${i + 1}`);
+    d.onclick = () => gallery.scrollTo({ left: i * gallery.clientWidth, behavior: 'smooth' });
+    dotsEl.appendChild(d);
+    return d;
+  });
+
+  // Update active dot on scroll
+  gallery.addEventListener('scroll', () => {
+    const idx = Math.round(gallery.scrollLeft / gallery.clientWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  });
+
+  // Mouse-wheel → horizontal slide (one full page per scroll tick)
+  gallery.addEventListener('wheel', e => {
+    if (e.deltaY === 0 || e.shiftKey) return;
+    const atStart = gallery.scrollLeft <= 0 && e.deltaY < 0;
+    const atEnd   = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1 && e.deltaY > 0;
+    if (!atStart && !atEnd) {
+      e.preventDefault();
+      const currentPage = Math.round(gallery.scrollLeft / gallery.clientWidth);
+      const targetPage  = currentPage + (e.deltaY > 0 ? 1 : -1);
+      gallery.scrollTo({ left: targetPage * gallery.clientWidth, behavior: 'smooth' });
+    }
+  }, { passive: false });
+})();
+</script>
+```
