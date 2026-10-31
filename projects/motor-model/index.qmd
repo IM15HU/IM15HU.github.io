@@ -1,6 +1,6 @@
 ---
 title: "Data-Driven Feedforward Motor Modeling"
-subtitle: "B.Tech Engineering Project · Prof. Andy Ruina · Jan 2026 – Present"
+subtitle: "B.Tech Engineering Project"
 description: "Developing an experimentally informed inverse model of a DC motor through synchronized measurements, motor characterization, deadband analysis, and comparisons between lookup tables, neural networks, and physics-informed modeling."
 categories: [Motor Control, Modelling, System Identification]
 start-date: "Jan 2026"
@@ -9,6 +9,8 @@ author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
+
+Instructor: [Prof Andy Lee Ruina](http://ruina.tam.cornell.edu/).
 ---
 
 ## Project Overview

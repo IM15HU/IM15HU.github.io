@@ -9,6 +9,8 @@ author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
+
+Instructor: [Prof Andy Lee Ruina](http://ruina.tam.cornell.edu/).
 ---
 
 ::: {.link-row}

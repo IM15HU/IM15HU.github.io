@@ -9,7 +9,10 @@ author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
+
+Instructor: [Prof Shashank Tamaskar](https://www.linkedin.com/in/shashank-tamaskar-67a2b919/).
 ---
+
 
 ## Project Overview
 

@@ -42,13 +42,14 @@ listing:
 ---
 
 ::: {#intro}
-B.Tech. student in Robotics and Autonomous Systems at Plaksha University, working
-on control systems, machine learning, and IoT for urban monitoring. I also make
-educational animations and computer-graphics content, some of it on
-[this YouTube playlist](https://youtube.com/playlist?list=PLab2EpIGbIVd9DgnPfOMJ6ehyLLtiyCWI&si=0IHqm07wHnHPA_e1).
+B.Tech student in Robotics and Autonomous Systems at Plaksha University, passionate about mechatronics, aerospace, and control engineering. My interests lie in designing and integrating complex electromechanical systems, with a focus on low-level control, system modelling, and hardware development.
+
+My work spans mechanical design, embedded systems, sensors and actuators, control algorithms, and UAV development. I enjoy taking ideas from concept to reality through hands-on fabrication and prototyping, using techniques such as 3D printing, laser cutting, soldering, and mechanical assembly etc.
+
+Outside engineering, I spend much of my time flying FPV drones, exploring freestyle and cinematic flying. Check out my flying here [YouTube](https://www.youtube.com/@im15hu)
 :::
 
-## Experience
+## ~~Experience~~
 
 ::: {.experience-list}
 - [Research Intern]{.exp-role}<br>
@@ -67,7 +68,7 @@ educational animations and computer-graphics content, some of it on
   localization. [More info](/experience/summer-intern-lars/)]{.exp-summary}
 :::
 
-## Teaching
+## ~~Teaching~~
 
 ::: {.experience-list}
 - [Student Tutor, FM113: Foundations of Physical World]{.exp-role}<br>

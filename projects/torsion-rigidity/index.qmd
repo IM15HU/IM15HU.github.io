@@ -1,6 +1,6 @@
 ---
 title: "Torsional Rigidity Experiment"
-subtitle: "Experimental Mechanics - Prof Andy Ruina"
+subtitle: "Experimental Mechanics"
 description: "An experimental comparison of the torsional rigidity of braced and unbraced structures using a rubber-band loading arrangement and an optical laser-and-mirror measurement setup."
 categories: [Experimental Mechanics, Structural Analysis]
 start-date: "Aug 2026"
@@ -9,6 +9,8 @@ author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
+
+Instructor: [Prof Andy Lee Ruina](http://ruina.tam.cornell.edu/).
 ---
 
 ::: {.link-row}

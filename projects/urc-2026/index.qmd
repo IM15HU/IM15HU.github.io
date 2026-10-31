@@ -9,6 +9,8 @@ author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
+
+Instructor: [Prof Deepan Muthirayan](https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/).
 ---
 
 ## Project Overview
