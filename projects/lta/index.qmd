@@ -10,9 +10,9 @@ author:
     url: /
     affiliation: Plaksha University
 
-instructor:
-  - name: Rajkumar Pant
-    url: https://www.linkedin.com/in/rajkumarpant/
+instructor: "Rajkumar Pant"
+
+**instructor:** {{instructor}}
 ---
 
 <!-- [<i class="bi bi-file-earmark-pdf"></i> Aerostat Sizing (PDF)](/assets/files/ITDA_Sizing_Asg.pdf) -->

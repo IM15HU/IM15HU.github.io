@@ -1,6 +1,6 @@
 ---
 title: "CanSat 2025 — Mechanical Design and Integration"
-subtitle: "Mechanical Lead · Kalki Robotics Club, Plaksha University · Oct 2024 – Feb 2025"
+subtitle: "Mechanical Lead | Kalki Robotics Club"
 description: "Led mechanical design for a CanSat competition entry, designing the satellite body, internal structure, and autogyro blades in Fusion 360. The team achieved a 92.4% Preliminary Design Review score."
 categories: [Mechanical Design, CAD]
 start-date: "Oct 2024"
@@ -10,7 +10,7 @@ author:
     url: /
     affiliation: Plaksha University
 
-Instructor:
+instructor:
   - name: Prof Shashank Tamaskar
     url: https://www.linkedin.com/in/shashank-tamaskar-67a2b919/
 ---
