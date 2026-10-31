@@ -1,5 +1,5 @@
 ---
-title: "Comparison of Neural Network and RL based Controls"
+title: "~~Comparison of Neural Network and RL based Controls~~"
 subtitle: "Research Project"
 description: "Comparing physics-informed neural network HJB-PDE solvers against RL algorithms for the inverted pendulum control problem, validated on hardware."
 categories: [Optimal Control, Physics-informed ML, RL]

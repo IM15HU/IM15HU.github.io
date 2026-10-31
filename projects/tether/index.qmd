@@ -1,6 +1,6 @@
 ---
 title: "Tension-Based Spatial Localization"
-subtitle: "Aerial Tether Systems"
+subtitle: "Aerial Tether Systems - Prof Andy Ruina"
 description: "Investigating tension-based spatial localization using an aerial platform, with the long-term goal of developing an energy-efficient blimp-kite system for persistent elevated payload deployment."
 categories: [Aerial Systems, Robotics, Control Systems]
 start-date: "Aug 2026"
@@ -15,7 +15,7 @@ author:
 [<i class="bi bi-file-earmark-pdf"></i> Report](/assets/files/tether.pdf)
 :::
 
-## Overview
+## Project Overview
 
 The objective of this project was to investigate whether an elevated payload could be maintained at a spatially constrained position using a tensioned tether system, without requiring GPS-based positional control of the aerial platform.
 

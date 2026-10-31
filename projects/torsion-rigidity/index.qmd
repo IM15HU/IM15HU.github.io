@@ -1,6 +1,6 @@
 ---
 title: "Torsional Rigidity Experiment"
-subtitle: "ILGC Motor Testing Project · Experimental Mechanics"
+subtitle: "Experimental Mechanics - Prof Andy Ruina"
 description: "An experimental comparison of the torsional rigidity of braced and unbraced structures using a rubber-band loading arrangement and an optical laser-and-mirror measurement setup."
 categories: [Experimental Mechanics, Structural Analysis]
 start-date: "Aug 2026"
@@ -17,11 +17,15 @@ author:
 
 ## Project Overview
 
-As part of the ILGC motor testing project, we conducted an experiment to investigate the torsional rigidity of a lightweight structural assembly. The experiment compared the response of the structure in trussed and untrussed configurations, using an applied torque and an optical measurement arrangement to observe the resulting angular deflection.
+We conducted an experimental investigation to quantify the effect of diagonal bracing on the torsional stiffness of a structural assembly. The objective was to understand how introducing diagonal members and triangulating a structure influences its resistance to twisting under an applied torque.
 
-The test rig was assembled on a fixed base. Rubber bands were used to apply the twisting load, while a mirror-and-laser arrangement provided a way to observe small changes in the structure's orientation. Readings were recorded for the two configurations to compare their resistance to twisting.
+We constructed a custom experimental rig to compare two configurations: an unbraced structure and a diagonally braced (trussed) structure. Torque was applied using rubber bands, while a laser-and-mirror arrangement was used to measure the resulting angular deflection. By comparing the measured responses under equivalent loading conditions, we determined the improvement in torsional rigidity achieved through diagonal bracing.
 
-The experiment provided a practical demonstration of how structural bracing influences torsional stiffness. The full report, including the experimental procedure, readings, calculations, and analysis, is attached below.
+The results showed that **the diagonally braced structure was 23.25 times more torsionally rigid than the unbraced configuration**. This experiment demonstrated the substantial contribution of diagonal members and structural triangulation to torsional stiffness.
+
+The complete report, including the experimental setup, methodology, measurements, calculations, and analysis, is attached below.
+
+
 
 ## Experimental Setup
 

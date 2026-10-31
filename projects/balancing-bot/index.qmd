@@ -1,5 +1,5 @@
 ---
-title: "Balancing Bot"
+title: "~~Balancing Bot~~"
 subtitle: "RO2001: System Dynamics and Control"
 description: "A cart-pole-inspired self-balancing robot using an IMU and stepper motors, kept upright with PID control tuned via the Ziegler–Nichols method."
 categories: [State Estimation, Control Theory]

@@ -1,5 +1,5 @@
 ---
-title: "Jumping Robot"
+title: "~~Jumping Robot~~"
 subtitle: "ME3001: Engineering Mechanics"
 description: "Design of a jumping / hopping robot meeting jump-height, endurance, footprint, and cost constraints."
 categories: [Mechenism Design, Dynamics]
