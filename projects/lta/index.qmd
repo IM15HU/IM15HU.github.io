@@ -10,9 +10,9 @@ author:
     url: /
     affiliation: Plaksha University
 
-instructor: "Rajkumar Pant"
-
-**instructor:** {{instructor}}
+instructor:
+  - name: Prof Deepan Muthirayan
+    url: https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/
 ---
 
 <!-- [<i class="bi bi-file-earmark-pdf"></i> Aerostat Sizing (PDF)](/assets/files/ITDA_Sizing_Asg.pdf) -->
