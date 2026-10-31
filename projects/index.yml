@@ -2,16 +2,14 @@
 # The homepage listing (index.qmd) points its `contents:` at this file
 # instead of globbing projects/*/index.qmd, so re-ordering or hiding a
 # project is a one-line change here rather than touching dates.
-- path: inverse-pinn-compliant-tube-flow/index.qmd
 - path: motor-model/index.qmd
-- path: foc-motor-control/index.qmd
-- path: digital-guitar-pedal/index.qmd
+- path: tether/index.qmd
+- path: torsion-rigidity/index.qmd
 - path: nn-rl-control-comparison/index.qmd
 - path: urc-2026/index.qmd
 - path: optimal-control/index.qmd
 - path: jumping-robot/index.qmd
 - path: equinox/index.qmd
-- path: hertz-experiment/index.qmd
 - path: lta/index.qmd
 - path: balancing-bot/index.qmd
 - path: cansat-2025/index.qmd
