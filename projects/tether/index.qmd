@@ -10,7 +10,9 @@ author:
     url: /
     affiliation: Plaksha University
 
-Instructor: [Prof Andy Lee Ruina](http://ruina.tam.cornell.edu/).
+instructor:
+  - name: Prof Andy Lee Ruina
+    url: http://ruina.tam.cornell.edu/
 ---
 
 ::: {.link-row}

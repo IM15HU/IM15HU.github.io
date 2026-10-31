@@ -9,11 +9,15 @@ author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
+
+instructor:
+  - name: Rajkumar Pant
+    url: https://www.linkedin.com/in/rajkumarpant/
 ---
 
 <!-- [<i class="bi bi-file-earmark-pdf"></i> Aerostat Sizing (PDF)](/assets/files/ITDA_Sizing_Asg.pdf) -->
 
-*Instructor: [Rajkumar Pant](https://www.linkedin.com/in/rajkumarpant/).*
+
 
 Below are a collection of projects completed by my team and I in the aforementioned course. They involve everything from theoretical design estimations for LTA systems, to designing and fabricating aerostats and payload devices.
 

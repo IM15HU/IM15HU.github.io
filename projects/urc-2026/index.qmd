@@ -10,7 +10,9 @@ author:
     url: /
     affiliation: Plaksha University
 
-Instructor: [Prof Deepan Muthirayan](https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/).
+instructor:
+  - name: Prof Deepan Muthirayan
+    url: https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/
 ---
 
 ## Project Overview
