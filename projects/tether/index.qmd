@@ -1,0 +1,57 @@
+---
+title: "Tension-Based Spatial Localization"
+subtitle: "Aerial Tether Systems"
+description: "Investigating tension-based spatial localization using an aerial platform, with the long-term goal of developing an energy-efficient blimp-kite system for persistent elevated payload deployment."
+categories: [Aerial Systems, Robotics, Control Systems]
+start-date: "Aug 2026"
+paper: /assets/files/tether.pdf
+author:
+  - name: Suyash Prakash
+    url: /
+    affiliation: Plaksha University
+---
+
+::: {.link-row}
+[<i class="bi bi-file-earmark-pdf"></i> Report](/assets/files/tether.pdf)
+:::
+
+## Overview
+
+The objective of this project was to investigate whether an elevated payload could be maintained at a spatially constrained position using a tensioned tether system, without requiring GPS-based positional control of the aerial platform.
+
+A 5-inch LW quadrotor equipped with GPS and running INAV was used as the initial proof-of-concept. Three ground anchors were connected to a common central junction, with a fourth tether connecting the junction to the drone.
+
+The drone was operated in Angle mode with sufficient throttle to maintain tension in the upper tether. Although the drone was allowed to move and loiter around the region above the junction, the central point remained spatially constrained. This demonstrated that GPS positional hold was not necessary; sufficient angular control to maintain tether tension was the primary requirement.
+
+![5-inch LW quadrotor used for the experiment](images/drone_pic.jpeg){width=65%}
+
+## Experimental Setup
+
+Three ground anchors, constructed using bricks and eyebolts, were arranged around a common central junction. The three lower strings converged at this point, while a fourth string connected it to the drone.
+
+![Three-point ground anchoring arrangement](images/pegs_strings.jpeg){width=65%}
+
+The setup was subsequently tested outdoors at greater altitude. The drone was operated using only Angle mode, while the tether geometry constrained the central payload location.
+
+![Outdoor tether setup showing the drone and central payload location](images/whole_marked.png){width=80%}
+
+![Outdoor night testing showing the central junction and three ground tether lines](images/night_2_marked.png){width=85%}
+
+## Future Development
+
+The long-term objective is to replace the multirotor with a buoyant blimp-kite hybrid capable of maintaining an approximately 1 kg payload at an elevated position for extended periods.
+
+The primary design considerations are energy efficiency and endurance. Buoyancy and aerodynamic lift will provide most of the required supporting force, while active control will primarily be used to maintain orientation and tether tension.
+
+Future testing will investigate outdoor operation at greater altitudes, wind disturbances, power tethering, increased payload capacity, and long-duration endurance.
+
+## Experimental Report
+
+The complete experimental report, including the methodology, observations, findings, and future development objectives, is available below.
+
+```{=html}
+<div class="embed-frame embed-frame-doc">
+<iframe src="/assets/files/tether.pdf" title="Tension-Based Spatial Localization - Experimental Report"></iframe>
+</div>
+```
+
