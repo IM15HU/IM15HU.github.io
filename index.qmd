@@ -42,49 +42,29 @@ listing:
 ---
 
 ::: {#intro}
-B.Tech student in Robotics and Autonomous Systems at Plaksha University, passionate about mechatronics, aerospace, and control engineering. My interests lie in designing and integrating complex electromechanical systems, with a focus on low-level control, system modelling, and hardware development.
+Engineering Undergraduate student in Robotics and Autonomous Systems at Plaksha University, passionate about mechatronics, aerospace, and control engineering. My interests lie in designing and integrating complex electromechanical systems, with a focus on low-level control, system modelling, and hardware development.
 
 My work spans mechanical design, embedded systems, sensors and actuators, control algorithms, and UAV development. I enjoy taking ideas from concept to reality through hands-on fabrication and prototyping, using techniques such as 3D printing, laser cutting, soldering, and mechanical assembly etc.
 
 Outside engineering, I spend much of my time flying FPV drones, exploring freestyle and cinematic flying. Check out my flying here [YouTube](https://www.youtube.com/@im15hu)
 :::
 
-## ~~Experience~~
+## Experience
 
 ::: {.experience-list}
-- [Research Intern]{.exp-role}<br>
-  [UR Rao Satellite Centre, Indian Space Research Organisation (ISRO)]{.exp-org} · [Jun 2026 – Jul 2026]{.exp-dates}<br>
-  [Learning & control for legged locomotion for lunar exploration. Combining RL with optimal control methods. [More info](/experience/isro-summer/)]{.exp-summary}
-
-- [Student Researcher]{.exp-role}<br>
-  [Dixon IoT Lab, Plaksha University]{.exp-org} · [Aug 2025 – Jun 2026]{.exp-dates}<br>
-  [Air quality monitoring for the Chandigarh Tricity region and air quality analysis of North India.
-  [More info](/experience/dixon-iot-lab/)]{.exp-summary}
-
 - [Summer Research Intern]{.exp-role}<br>
-  [Prof. Sunita Chauhan, Plaksha University]{.exp-org} · [Jun 2025 – Aug 2025]{.exp-dates}<br>
-  [Built a ROS2 testbed robot with LiDAR, IMU, GPS and camera for a
-  precision-agriculture UGV, implementing SLAM, mission planning and
-  localization. [More info](/experience/summer-intern-lars/)]{.exp-summary}
+  [Prof. Andy Ruina, Plaksha University]{.exp-org} · [Jun 2025 – Aug 2025]{.exp-dates}<br>
+  [Worked on data-driven feedforward motor modeling project under Prof Andy Ruina. Built a test bed to characterize a DC motor with loadcells, current sensors, encoders etc to find torque and speed characteristics. Also served as an advisor to a team of juniors trying to work on tethered weather balloon project.[More info](/projects/motor-model/)]{.exp-summary}
 :::
 
-## ~~Teaching~~
+## Teaching
 
 ::: {.experience-list}
-- [Student Tutor, FM113: Foundations of Physical World]{.exp-role}<br>
-  [Plaksha University]{.exp-org} · [Aug 2026 – Present]{.exp-dates}<br>
-  Supporting instruction for freshman physics course with 300+ students, under Prof. Shashikant Pawar, Prof. Praveen Kumar and Prof. Andy Ruina.
-
 - [Student Tutor, FM214: Intelligent Machines]{.exp-role}<br>
   [Plaksha University]{.exp-org} · [Aug 2026 – Present]{.exp-dates}<br>
   Supporting instruction for the sophomore robotics course with 230+ students,
-  under Prof. Andy Ruina and Prof. Sandeep Manjanna, assisting with tutorials
-  and labs on mobile robots, estimation, planning, and control.
-
-- [Student Tutor, Mechatronics]{.exp-role}<br>
-  [Plaksha University]{.exp-org} · [Aug 2025 – Dec 2025]{.exp-dates}<br>
-  [Ran tutorials and labs on differential-drive kinematics, PID control, and DC
-  motor modelling. [More info](/experience/mechatronics-ta/)]{.exp-summary}
+  under Prof. Andy Ruina and Prof. Sandeep Manjanna. Assisting with labs and office
+  hours. Helping students with ardunio programming, control, and mechatronics concepts.
 :::
 
 ## Projects
