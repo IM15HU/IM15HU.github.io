@@ -1,0 +1,174 @@
+---
+title: "RC Hobbyist — From Model Aircraft to FPV Engineering"
+subtitle: "Independent Projects · RC Aircraft, FPV Drones and Mechanical Design"
+description: "An exploration of RC aircraft and FPV drone engineering, spanning 3D printing, CAD, aircraft construction, flight control systems, PID tuning, RF communications, and custom frame design."
+categories: [RC Aircraft, FPV Drones, Rapid Prototyping, CAD]
+start-date: "2020"
+end-date: "Present"
+author:
+  - name: Suyash Prakash
+    url: /
+    affiliation: Independent
+---
+
+## Overview
+
+What started as an interest in remote-controlled aircraft gradually became my introduction to engineering. Building RC planes and experimenting with FPV drones introduced me to mechanical design, fabrication, electronics, aerodynamics, and control systems. Over time, I moved from assembling off-the-shelf components to designing custom aircraft structures, configuring flight controllers, analysing flight data, and helping others build and optimize their drones.
+
+This journey gave me an opportunity to explore engineering through hands-on experimentation. It was where I first started working with CAD, 3D printing, embedded electronics, and practical control systems. What began as a hobby eventually developed into an interest in designing and building complete engineering systems.
+
+## 3D Printing and Rapid Prototyping
+
+I was introduced to 3D printing through my early experiments with RC aircraft. It fundamentally changed how I approached building things. Instead of relying entirely on commercially available components, I could design custom parts, fabricate them, and iterate on the physical design myself.
+
+This led me to explore CAD and digital fabrication, developing an understanding of how a digital model translates into a physical component. I began experimenting with different geometries, mounting arrangements, and structural designs, using 3D printing as a rapid prototyping tool. This was also my introduction to the broader design-for-manufacturing workflow, where mechanical constraints and fabrication limitations influence the design itself.
+
+![3D printed components and CAD models](3d-printing.webp){width=700}
+
+## RC Fixed-Wing Aircraft
+
+My initial experience with RC aircraft involved building and flying fixed-wing models. This was my first real exposure to aircraft design and the engineering considerations behind making an aircraft fly.
+
+I began exploring different airframe configurations, propulsion arrangements, component layouts, and aerodynamic considerations. Building these aircraft required understanding the relationship between the airframe, centre of gravity, propulsion system, and control surfaces. It also introduced me to the practical challenges of assembling and configuring a complete aircraft rather than working with individual components in isolation.
+
+![Early RC fixed-wing aircraft builds](rc-aircraft.webp){width=700}
+
+I used CAD to develop and modify mechanical components for my builds, initially working with FreeCAD before transitioning to Autodesk Fusion 360. This gave me the ability to design custom parts, experiment with structural geometries, and develop components that could be fabricated and integrated into my aircraft.
+
+## FPV Drones — Building, Flying and Tuning
+
+I eventually transitioned into FPV (First Person View) drones, building multirotors of different shapes, sizes, and configurations for a variety of applications. My flying experience ranged from cinematic flying, which focuses on smooth and controlled camera movements, to freestyle flying, which involves complex acrobatic manoeuvres and precise aircraft control. I also explored lightweight racing configurations, where aircraft weight, responsiveness, and mechanical performance become particularly important.
+
+![FPV freestyle aircraft](fpv-freestyle.webp){width=700}
+
+![Cinematic FPV aircraft](fpv-cinematic.webp){width=700}
+
+Building and configuring these aircraft introduced me to flight-control systems, particularly **Betaflight**. I developed practical experience configuring flight controllers, understanding PID controllers, and tuning aircraft to achieve the desired flight characteristics. I experimented with PID tuning and filter tuning, learning how proportional, integral, and derivative gains influence flight response, and how mechanical vibrations and motor noise affect the quality of IMU measurements.
+
+![Betaflight configuration](betaflight-configuration.webp){width=700}
+
+I also began using **Blackbox logging and PIDToolbox** to analyse flight data, investigate oscillations, identify mechanical resonance, and understand the relationship between airframe behaviour and flight-controller performance. This was my introduction to practical control systems. Rather than treating tuning as trial and error, I gradually developed an understanding of the underlying control behaviour and the importance of analysing system response.
+
+![PIDToolbox flight-log analysis](pidtoolbox-analysis.webp){width=700}
+
+Building FPV aircraft also introduced me to RF communications and video transmission systems. I gained practical experience with RC receivers, transmitters, video transmitters (VTXs), antennas, polarization, and different frequency bands used for control and video links. Understanding antenna selection, placement, and signal quality became an important part of configuring reliable FPV systems.
+
+![FPV communications and antenna setup](fpv-communications.webp){width=700}
+
+As I gained experience, I also started helping other pilots with their builds and configurations. I worked as an independent FPV consultant, assisting people with component selection, aircraft assembly, troubleshooting, Betaflight configuration, and PID tuning. I also mentored beginners in understanding flight-controller behaviour and improving their aircraft through systematic tuning.
+
+## Custom FPV Frame Design
+
+As my experience with FPV aircraft grew, I became increasingly interested in designing the frames themselves rather than relying entirely on commercially available options. I started experimenting with frame geometries, structural layouts, component mounting, and material selection, using CAD to develop custom airframes.
+
+![Custom FPV frame CAD designs](fpv-frame-design.webp){width=700}
+
+One of these projects involved designing a **5-inch lightweight FPV frame for racing**. The objective was to develop a lightweight structural design suited to racing applications, where reducing mass while maintaining adequate structural rigidity is important. This involved considering the frame geometry, motor mounting locations, electronics layout, and the trade-offs between structural strength and weight.
+
+![5-inch lightweight racing frame](5inch-lw-frame.webp){width=700}
+
+My experimentation with custom frame design eventually led to the development of **Equinox**, a carbon-fibre FPV frame that I independently designed, patented, and commercialized. Equinox is documented as a separate project in my portfolio.
+
+## Looking Back
+
+This journey was my introduction to engineering as something that could be explored through building, experimentation, and iteration. It taught me to approach problems from the perspective of the complete system. An aircraft is not simply a collection of motors and electronics; its mechanical structure, propulsion, sensing, communications, and control systems are all interconnected.
+
+It also introduced me to the satisfaction of designing something digitally, fabricating it, assembling the hardware, and seeing it work in the real world. What started as a hobby eventually developed into a deeper interest in mechanical design, mechatronics, flight dynamics, and control engineering — areas that continue to shape the engineering projects I pursue today.
+
+## Gallery
+
+```{=html}
+<div class="project-gallery-wrapper">
+  <div class="project-gallery" id="rc-gallery"></div>
+</div>
+<div class="gallery-dots" id="rc-gallery-dots"></div>
+
+<script>
+(function () {
+  const images = [
+    /* Add filenames here from gallery_imgs/, e.g. "image1.jpg" */
+  ];
+
+  /* noscript fallbacks so Quarto's resource scanner sees the files */
+  /* noscript:
+  */
+
+  const PER_PAGE = 4; // 2x2
+  const gallery  = document.getElementById('rc-gallery');
+  const dotsEl   = document.getElementById('rc-gallery-dots');
+
+  if (images.length === 0) {
+    const page = document.createElement('div');
+    page.className = 'gallery-page';
+    for (let j = 0; j < PER_PAGE; j++) {
+      const blank = document.createElement('div');
+      blank.className = 'gallery-placeholder';
+      blank.innerHTML = '<span class="placeholder-icon">📷</span><span>Add images to gallery_imgs/</span>';
+      page.appendChild(blank);
+    }
+    gallery.appendChild(page);
+    return;
+  }
+
+  // Chunk images into pages of 4
+  const pages = [];
+  for (let i = 0; i < images.length; i += PER_PAGE) {
+    pages.push(images.slice(i, i + PER_PAGE));
+  }
+
+  // Build pages
+  pages.forEach((pageImgs, pi) => {
+    const page = document.createElement('div');
+    page.className = 'gallery-page';
+
+    pageImgs.forEach(filename => {
+      const img = document.createElement('img');
+      img.src     = `gallery_imgs/${filename}`;
+      img.alt     = filename;
+      img.loading = 'lazy';
+      img.title   = 'Click to open full resolution';
+      img.onclick = () => window.open(img.src, '_blank');
+      page.appendChild(img);
+    });
+
+    // If last page has < 4 images, fill blanks so grid stays even
+    for (let j = pageImgs.length; j < PER_PAGE; j++) {
+      const blank = document.createElement('div');
+      blank.className = 'gallery-placeholder';
+      page.appendChild(blank);
+    }
+
+    gallery.appendChild(page);
+  });
+
+  // Dot indicators
+  const dots = pages.map((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', `Go to page ${i + 1}`);
+    d.onclick = () => gallery.scrollTo({ left: i * gallery.clientWidth, behavior: 'smooth' });
+    dotsEl.appendChild(d);
+    return d;
+  });
+
+  // Update active dot on scroll
+  gallery.addEventListener('scroll', () => {
+    const idx = Math.round(gallery.scrollLeft / gallery.clientWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  });
+
+  // Mouse-wheel → horizontal slide (one full page per scroll tick)
+  gallery.addEventListener('wheel', e => {
+    if (e.deltaY === 0 || e.shiftKey) return;
+    const atStart = gallery.scrollLeft <= 0 && e.deltaY < 0;
+    const atEnd   = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1 && e.deltaY > 0;
+    if (!atStart && !atEnd) {
+      e.preventDefault();
+      const currentPage = Math.round(gallery.scrollLeft / gallery.clientWidth);
+      const targetPage  = currentPage + (e.deltaY > 0 ? 1 : -1);
+      gallery.scrollTo({ left: targetPage * gallery.clientWidth, behavior: 'smooth' });
+    }
+  }, { passive: false });
+})();
+</script>
+```

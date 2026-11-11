@@ -52,6 +52,10 @@ Outside engineering, I spend much of my time flying FPV drones, exploring freest
 ## Experience
 
 ::: {.experience-list}
+- [RC Hobbyist & FPV Drone Engineering]{.exp-role}<br>
+  [Independent Projects]{.exp-org} · [2020 – Present]{.exp-dates}<br>
+  [Hands-on exploration of RC aircraft and FPV drone engineering, spanning 3D printing, CAD, aircraft construction, flight control systems, PID tuning, RF communications, and custom frame design. [More info](/experience/rc-hobbyist/)]{.exp-summary}
+
 - [Summer Research Intern]{.exp-role}<br>
   [Prof. Andy Ruina, Plaksha University]{.exp-org} · [Jun 2025 – Aug 2025]{.exp-dates}<br>
   [Worked on data-driven feedforward motor modeling project under Prof Andy Ruina. Built a test bed to characterize a DC motor with loadcells, current sensors, encoders etc to find torque and speed characteristics. Also served as an advisor to a team of juniors trying to work on tethered weather balloon project.[More info](/projects/motor-model/)]{.exp-summary}
