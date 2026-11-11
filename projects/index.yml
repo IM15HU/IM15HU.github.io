@@ -6,8 +6,5 @@
 - path: tether/index.qmd
 - path: torsion-rigidity/index.qmd
 - path: urc-2026/index.qmd
-- path: jumping-robot/index.qmd
 - path: equinox/index.qmd
-- path: lta/index.qmd
-- path: balancing-bot/index.qmd
 - path: cansat-2025/index.qmd
