@@ -1,100 +1,320 @@
 ---
 title: "Equinox — FPV Drone Frame Design"
 subtitle: "Independent Engineering Project · Oct 2022 – Oct 2025"
-description: "Designed and commercialized a patented T300 carbon-fibre FPV drone frame, combining mechanical design, structural considerations, fabrication, flight testing, and product development."
-categories: [Mechanical Design, Hardware]
+description: "Designed and commercialized a custom T300 carbon-fibre FPV drone frame, focusing on mechanical rigidity, vibration isolation, lightweight construction, flight performance, and manufacturability."
+categories: [Mechanical Design, Hardware, Product Development]
 start-date: "Oct 2022"
-end-date: "Oct 2025"
+end-date: "Oct 2024"
 author:
   - name: Suyash Prakash
     url: /
-    affiliation: Self
+    affiliation:
+      name: "Self - Meteor Dynamics"
+      url: https://meteordynamics.in
+    affiliation-url: https://meteordynamics.in
 ---
 
 ## Project Overview
 
-Equinox was an independent engineering project through which I designed and commercialized a custom carbon-fibre frame for FPV drones. The project combined my experience as an FPV freestyle pilot with my interest in mechanical design, structural engineering, and product development.
+Equinox was an independent engineering project through which I designed, developed, and commercialized a custom carbon-fibre frame for FPV freestyle drones. The project combined my experience as an FPV pilot with my interests in mechanical design, structural engineering, and product development.
 
-An FPV drone frame is more than a structure that holds the motors and electronics together. Its geometry, stiffness, mass distribution, and vibration characteristics influence the behaviour of the aircraft. The frame must provide sufficient structural rigidity while remaining lightweight and practical to manufacture.
+The idea originated from my dissatisfaction with commercially available FPV frames. Most frames available in the Indian market were imported, expensive, and often prioritized durability, aesthetics, and compatibility over flight performance. Having spent considerable time building, flying, and tuning FPV drones, I had a fairly good understanding of the mechanical limitations that could affect an aircraft's behaviour.
 
-My experience flying and building FPV drones provided a practical foundation for approaching these design considerations. Instead of treating the frame as an isolated CAD exercise, I approached it as a product intended for real-world use by FPV pilots.
+I wanted to develop a frame that addressed these shortcomings: mechanically rigid, lightweight, compatible with commonly available electronics, and competitively priced. The project progressed from initial sketches and CAD models to 3D-printed prototypes, carbon-fibre fabrication, flight testing, and eventually commercial production.
 
-The result was Equinox, a custom frame designed in CAD, fabricated using T300 carbon fibre, registered with the Indian Patent Office, and commercialized in the Indian market.
+The final design was fabricated using T300 carbon fibre, registered with the Indian Patent Office under Design No. 392685-001, and commercialized in the Indian FPV market, with 15 units sold.
+
+## Why I Designed My Own Frame
+
+My motivation came from three problems I repeatedly encountered with existing FPV frames:
+
+- **Poor mechanical rigidity:** The frame I was previously flying was not sufficiently rigid. Motor vibrations were easily transmitted through the structure to the flight controller's gyroscope. These unwanted high-frequency vibrations were interpreted as actual aircraft movement, contributing to wobbles and oscillations during flight.
+- **High cost:** Performance-oriented frames were expensive, both in India and internationally. This made high-quality hardware relatively inaccessible to beginner pilots.
+- **Limited compatibility:** Many high-performance frames offered limited mounting options and tight electronics clearances. Installing different combinations of flight controllers, ESCs, receivers, and other electronics could become difficult.
+
+I wanted to approach frame design from the perspective of an actual pilot. Rather than simply developing another durable carbon-fibre frame, my objective was to improve the mechanical characteristics that directly influence flight performance.
 
 ## Design Objectives
 
-The primary objective was to develop a custom FPV drone frame that could be manufactured and used as a physical product rather than remaining a digital design.
+I established a few primary objectives before beginning the design:
 
-The development process involved several interconnected considerations:
+- **Performance:** A mechanically sound structure that was lightweight, rigid, and durable, with a true-X configuration for predictable flight characteristics.
+- **Vibration isolation:** Minimize the transmission of motor vibrations to the flight controller and IMU.
+- **Compatibility:** Accommodate commonly used electronics and provide sufficient space for different component configurations.
+- **Affordability:** Develop a competitively priced alternative to existing performance-oriented frames.
+- **Larger wheelbase:** Support propellers up to 5.5 inches, allowing the aircraft to carry heavier action cameras.
+- **Freestyle-oriented layout:** Incorporate a true-X configuration and the inverted battery mounting arrangement commonly referred to as the "toilet tank" style.
 
-- **Mechanical design:** Developing the frame geometry and component layout in CAD.
-- **Structural rigidity:** Considering how the frame geometry and material affect structural behaviour.
-- **Weight:** Balancing structural requirements with the mass constraints of an FPV aircraft.
-- **Manufacturability:** Developing a design that could be fabricated using carbon-fibre manufacturing processes.
-- **Practical usability:** Drawing on experience with drone assembly, flight behaviour, and pilot requirements.
-
-These considerations influenced the design process and the transition from the digital model to a commercially available product.
+These objectives guided the mechanical design and the decisions made throughout the development process.
 
 ## Mechanical Design and CAD
 
-I developed the frame geometry using CAD, translating the requirements of an FPV aircraft into a physical structural layout.
+I developed the frame using FreeCAD, beginning with rough sketches on graph paper before translating the geometry into a parametric CAD model. I studied several existing freestyle frames, particularly high-performing designs, to understand their geometry, mounting arrangements, and structural layouts.
 
-The design process involved considering the relationship between the frame's geometry, component mounting locations, structural members, and the requirements of a complete drone assembly.
+One of the important considerations was ensuring compatibility with commonly available FPV electronics. I modelled the overall layout around the mounting standards and dimensions of popular components, while leaving sufficient room for wiring, connectors, and accessories.
 
-My experience as a pilot also informed the design perspective. Practical experience with drone setup and flight behaviour provides a different understanding of frame requirements than CAD modelling alone, particularly when considering stiffness, mechanical resonance, and the effects of vibration.
+![Equinox CAD frame render.](equniox_render.jpg){width=700}
 
-The frame was designed with carbon-fibre fabrication in mind, so the final geometry had to be suitable for manufacturing rather than simply optimized for appearance in a CAD environment.
+![CAD versatility render showing component mounting and layout.](verstality_render.jpg){width=700}
+
+Once the CAD model was complete, I 3D-printed a prototype to check its dimensions and physically test the fitment of electronics. This allowed me to identify potential interference issues and make changes before committing to carbon-fibre fabrication.
+
+![3D-printed prototype used for checking component fitment.](3d_print_1.jpg){width=700}
+
+![3D-printed prototype assembly.](3d_print_2.jpg){width=700}
+
+![Physical fitment testing with 3D-printed parts.](3d_print_3.jpg){width=700}
+
+## Structural Design Considerations
+
+A major part of the design involved addressing the relationship between frame rigidity, vibration transmission, and flight-controller performance.
+
+One of the key changes was separating the flight-controller mounting hardware from the hardware securing the arms. In many conventional layouts, the same screws are used to secure both the arms and the flight-controller stack. This creates a direct mechanical path through which motor vibrations can propagate towards the gyroscope.
+
+In my design, the stack mounting screws were recessed and mechanically separated from the arm mounting arrangement. This was intended to reduce vibration transmission to the flight controller while also making arm replacement easier.
+
+I also considered how the structure would protect its electronics and respond to crashes. The central electronics compartment was enclosed within the frame structure and surrounded by standoffs, providing additional protection against physical impacts. The geometry was designed so that the arms would make initial contact during many crash scenarios, keeping the central body and electronics relatively protected. Arms were designed to be easily replaceable in field.
+
+![Frame protection and central electronics compartment design.](protection_render.png){width=700}
+
+These decisions were intended to balance flight performance, serviceability, and durability without unnecessarily increasing the overall weight.
 
 ## Material Selection and Fabrication
 
-The frame was fabricated using T300 carbon fibre, a material commonly used in lightweight structural applications.
+The frame was designed for fabrication using T300 carbon fibre, selected for its stiffness-to-weight characteristics and suitability for lightweight structural applications.
 
-Carbon-fibre composites are attractive for FPV frames because of their high stiffness-to-weight potential. However, the behaviour of a finished component also depends on its geometry, laminate construction, fibre orientation, and manufacturing quality.
+Getting from CAD to a manufacturable product was one of the more challenging parts of the project. Finding a reliable CNC vendor who could consistently manufacture parts to the required dimensions proved difficult. I also struggled to source suitable M3 press-nuts locally, while high-quality carbon-fibre sheets were relatively expensive.
 
-I coordinated the fabrication of the frame in China, taking the project beyond CAD and into physical production.
+I initially experimented with a generic carbon-fibre batch, but the material did not match the specifications I had designed around. Subsequent iterations helped identify manufacturing and dimensional issues, particularly the importance of maintaining accurate and identical arm geometries.
 
-This stage introduced practical product-development considerations, including communicating a design for manufacturing and ensuring that the digital design could be translated into a usable physical component.
+![Early carbon-fibre manufacturing run and components.](carbon_1.jpg){width=700}
 
-## Flight Experience and Mechanical Analysis
+![CNC-machined carbon-fibre frame pieces.](frame_carbon_pcs.jpg){width=700}
 
-My background as an FPV freestyle pilot contributed directly to my approach to frame design and drone performance.
+Eventually, I coordinated the production of the final batch in China through a manufacturing contact. The final carbon-fibre quality and dimensions were much closer to the intended specifications.
 
-I have also worked with blackbox flight data to investigate mechanical resonance and improve drone setup. Blackbox data can help identify oscillations and vibration patterns that may be difficult to distinguish from flight behaviour alone.
+![Final carbon-fibre batch and assembled frame.](carbon_2.jpg){width=700}
 
-Mechanical resonance is particularly relevant to multirotor aircraft because motor excitation, propeller imbalance, and structural flexibility can introduce vibrations into the system. These vibrations may affect the quality of sensor measurements and complicate flight-controller tuning.
+## Flight Testing and Blackbox Analysis
 
-I also mentored beginner pilots in PID tuning, developing practical experience in diagnosing flight-control behaviour and understanding the interaction between the airframe and its control system.
+Mechanical design alone was not sufficient to evaluate the performance of the frame. Since the ultimate objective was to improve flight characteristics, I used FPV flight testing and Blackbox data to investigate the relationship between mechanical vibrations and flight-controller behaviour.
+
+Blackbox logging records internal flight-controller data, allowing parameters such as gyro measurements, PID responses, motor behaviour, and noise characteristics to be analysed after a flight.
+
+I explored different filtering techniques available in Betaflight, including:
+
+- Static notch filters
+- Dynamic notch filters
+- RPM filters
+- Gyro low-pass filters
+
+An important consideration during this analysis was the trade-off between noise suppression and signal latency. Filtering helps remove unwanted noise from gyro measurements, but excessive filtering can introduce additional delay into the control signal. This can negatively affect how quickly the flight controller responds to actual aircraft movement.
+
+My approach was to understand the frequency distribution of the noise and identify regions where filtering was necessary, rather than applying filters indiscriminately. Filters operating in relatively quiet frequency regions could potentially be reduced or disabled to minimize unnecessary latency.
+
+### Understanding the Blackbox Graphs
+
+The following graphs are from a poorly constructed drone analysed using stock Betaflight filtering settings. They illustrate how different sources of noise appear in flight-controller data and how they can be distinguished.
+
+The noise spectrum for the roll, pitch, and yaw axes provides a comparison between the raw input signal and the filtered output. This helps visualize how effectively the default filter configuration suppresses unwanted noise.
+
+![Roll, pitch and yaw noise spectrum with stock filter settings.](gyro_signal.jpg){width=700}
+
+Throttle-versus-frequency spectrograms provide another useful perspective. Motor-generated noise appears as frequency bands that change with throttle, while structural resonance appears as relatively fixed-frequency peaks.
+
+In the analysed build, I could identify a structural resonance region that was suitable for treatment using a dynamic notch filter. Motor-related noise, on the other hand, could be addressed using RPM filtering.
+
+![Throttle versus frequency spectrogram showing resonance and motor noise.](throttle_freq_mag_plot.png){width=700}
+
+I also investigated the effect of disabling filters in frequency regions with relatively little noise. The objective was to avoid unnecessary filtering and reduce signal delay while retaining adequate noise suppression.
+
+![Identifying relatively quiet frequency regions for filter optimization.](filter_turnoff.png){width=700}
+
+Finally, I examined the stock PID response to understand how closely the commanded response tracked the desired setpoint. This provided a baseline for understanding controller behaviour and identifying areas where tuning could be improved.
+
+![Stock PID response and setpoint tracking analysis.](pid_step_response.png){width=700}
+
+These experiments helped me understand that flight performance is influenced by more than PID gains alone. Mechanical rigidity, motor characteristics, structural resonance, sensor noise, and filtering all contribute to the behaviour of a multirotor aircraft.
+
+*Note: The graphs shown are from a separate, poorly constructed test drone and were recorded using default Betaflight settings. Their characteristics are specific to that build and should not be interpreted as measurements of Equinox itself.*
+
+## Challenges and Iterations
+
+The project involved several practical challenges that were not immediately apparent during the CAD design stage.
+
+Finding a reliable CNC manufacturing vendor was particularly difficult. Dimensional inaccuracies in early batches affected the assembly and highlighted how important manufacturing tolerances are for structural interfaces. Sourcing suitable hardware, especially M3 press-nuts, and obtaining high-quality carbon-fibre sheets at a reasonable cost were additional obstacles.
+
+I also attempted finite element analysis using FreeCAD, but interpreting the simulation results proved challenging at the time. Instead, much of my structural evaluation relied on engineering intuition, geometric reasoning, and practical testing.
+
+The development process involved multiple iterations of the frame, with manufacturing feedback and physical assembly helping identify issues that were difficult to anticipate in the initial CAD model.
 
 ## Product Development and Commercialization
 
-Equinox was developed as a commercial product, not solely as a personal prototype.
+Equinox eventually progressed beyond a personal engineering project into a commercial product.
 
-The project required moving from a digital design to fabrication and then introducing the finished frame to the Indian FPV market. This provided experience with the practical considerations involved in bringing a physical engineering product to customers.
-
-The frame was successfully commercialized, with 15 units sold in the Indian market.
+I coordinated the manufacturing of the final carbon-fibre frames in China and introduced the product to the Indian FPV market. The final frame had an approximate carbon-fibre weight of 100 g and an assembled hardware weight of 115 g.
 
 The design was registered with the Indian Patent Office under Design No. 392685-001.
 
-## Key Outcomes
+A total of 15 units were sold, with additional units used for testing and personal builds. Taking the project from an initial concept to a manufactured and commercialized product gave me experience with the entire product-development process, including CAD, prototyping, material selection, manufacturing coordination, quality control, and sales.
 
-- Designed a custom FPV drone frame in CAD.
-- Developed the design for T300 carbon-fibre fabrication.
-- Coordinated physical manufacturing in China.
-- Registered the design with the Indian Patent Office.
-- Sold 15 units in the Indian market.
-- Applied practical FPV flight experience to mechanical design and drone-performance analysis.
+![Final Equinox carbon-fibre frame assembled with electronics.](Flux80stylishphoto.jpg){width=700}
+
+![Equinox assembled as a complete FPV drone.](IMG_20240822_181353968_HDR.jpg){width=700}
+
+## Patent and Intellectual Property
+
+The Equinox frame design was granted a design patent by the Indian Patent Office under **Design Registration No. 392685-001**.
+
+Securing the patent was an important milestone in the project, formally recognizing the frame's original industrial design. It also marked a significant step in taking Equinox beyond an independently developed prototype and establishing it as a commercial product.
+
+![Granted design patent for the Equinox FPV drone frame, registered with the Indian Patent Office.](patent.png){width=650}
 
 ## What I Learned
 
-This project connected mechanical design with the realities of manufacturing and product development.
+Equinox was one of my first experiences taking an engineering idea through the entire process of design, fabrication, testing, and commercialization.
 
-It strengthened my understanding of how engineering decisions must account for more than the geometry of a CAD model. Material behaviour, fabrication constraints, assembly requirements, vibration, usability, and commercial viability all influence whether a design succeeds as a product.
+It taught me that a successful mechanical design is not simply one that looks good in CAD. It must account for material properties, manufacturing limitations, dimensional tolerances, assembly, maintenance, and the actual operating environment.
 
-It also reinforced the value of combining hands-on experience with engineering tools: practical knowledge of FPV aircraft helped inform the design, while CAD and fabrication enabled that knowledge to become a physical product.
+More importantly, my experience as an FPV pilot allowed me to approach the problem from a practical perspective. I could connect mechanical design decisions to observable flight behaviour and use flight-controller data to investigate problems that would otherwise be difficult to diagnose.
 
-<!-- Suggested images:
-![Equinox frame CAD model](fpv-frame-cad.webp){width=700}
-![Fabricated Equinox carbon-fibre frame](fpv-frame-built.webp){width=700}
-![Complete FPV drone assembly](fpv-drone-assembly.webp){width=700}
--->
+The project strengthened my interest in mechanical design, structural engineering, and the interaction between physical systems and control systems. It also gave me the confidence to take an independently developed hardware product from an idea to a commercially available product.
 
+## Gallery
+
+```{=html}
+<div class="project-gallery-wrapper">
+  <div class="project-gallery" id="equinox-gallery"></div>
+</div>
+<div class="gallery-dots" id="equinox-gallery-dots"></div>
+
+<script>
+(function () {
+  const images = [
+    "1000000784.jpg",
+    "1000000979.jpg",
+    "1000027210.jpg",
+    "1000085392.jpg",
+    "Flux80stylishphoto.jpg",
+    "IMG20221108201739.jpg",
+    "IMG20221108203548.jpg",
+    "IMG20221108215857.jpg",
+    "IMG20230217182359.jpg",
+    "IMG20230227185833.jpg",
+    "IMG20230227190925.jpg",
+    "IMG20230227190943.jpg",
+    "IMG20230227192837.jpg",
+    "IMG20230228193100.jpg",
+    "IMG20230527140436.jpg",
+    "IMG20230606195642.jpg",
+    "IMG20240103232711.jpg",
+    "IMG20240202202422.jpg",
+    "IMG20240202202817.jpg",
+    "IMG20240202203024.jpg",
+    "IMG20240202203247.jpg",
+    "IMG20240202203420.jpg",
+    "IMG20240202203748.jpg",
+    "IMG20240202210255.jpg",
+    "IMG20240204151809.jpg",
+    "IMG20240213200451.jpg",
+    "IMG20240213200501.jpg",
+    "IMG20240213200509.jpg",
+    "IMG20240213200513.jpg",
+    "IMG20240213211056.jpg",
+    "IMG20240213212108.jpg",
+    "IMG20240213213102.jpg",
+    "IMG20240213213646.jpg",
+    "IMG20240213220253.jpg",
+    "IMG20240330184643.jpg",
+    "IMG20240330212159.jpg",
+    "IMG_20230721_195638092_HDR.jpg",
+    "IMG_20240718_182330086.jpg",
+    "IMG_20240718_212300079.jpg",
+    "IMG_20240720_010742826.jpg",
+    "IMG_20240720_010817164.jpg",
+    "IMG_20240720_144857890.jpg",
+    "IMG_20240822_181353968_HDR.jpg",
+    "Screenshot_from_2022-11-09_18-05-07-1.png",
+    "Screenshot_from_2022-11-09_18-05-07.png",
+    "Screenshot_from_2022-11-11_14-15-23.png",
+    "Screenshot_from_2022-11-15_17-55-03.png",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM (1).jpeg",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM (2).jpeg",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM (3).jpeg",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM (4).jpeg",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM (5).jpeg",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM (6).jpeg",
+    "WhatsApp Image 2026-11-12 at 7.09.49 PM.jpeg",
+    "img-20230707-wa0000-913x411.jpg",
+    "img-20230902-wa00121-913x1217.jpeg",
+    "img20240213212108-913x685.jpeg",
+    "verstality-pic-842x632.jpg",
+    "whatsapp-image-2024-07-12-at-7.58.05-pm-1256x942.jpg"
+  ];
+
+
+  const PER_PAGE = 4; // 2x2
+  const gallery  = document.getElementById('equinox-gallery');
+  const dotsEl   = document.getElementById('equinox-gallery-dots');
+
+  // Chunk images into pages of 4
+  const pages = [];
+  for (let i = 0; i < images.length; i += PER_PAGE) {
+    pages.push(images.slice(i, i + PER_PAGE));
+  }
+
+  // Build pages
+  pages.forEach((pageImgs, pi) => {
+    const page = document.createElement('div');
+    page.className = 'gallery-page';
+
+    pageImgs.forEach(filename => {
+      const img = document.createElement('img');
+      img.src     = `gallery_imgs/${filename}`;
+      img.alt     = filename;
+      img.loading = 'lazy';
+      img.title   = 'Click to open full resolution';
+      img.onclick = () => window.open(img.src, '_blank');
+      page.appendChild(img);
+    });
+
+    // If last page has < 4 images, fill blanks so grid stays even
+    for (let j = pageImgs.length; j < PER_PAGE; j++) {
+      const blank = document.createElement('div');
+      blank.className = 'gallery-placeholder';
+      page.appendChild(blank);
+    }
+
+    gallery.appendChild(page);
+  });
+
+  // Dot indicators
+  const dots = pages.map((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', `Go to page ${i + 1}`);
+    d.onclick = () => gallery.scrollTo({ left: i * gallery.clientWidth, behavior: 'smooth' });
+    dotsEl.appendChild(d);
+    return d;
+  });
+
+  // Update active dot on scroll
+  gallery.addEventListener('scroll', () => {
+    const idx = Math.round(gallery.scrollLeft / gallery.clientWidth);
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  });
+
+  // Mouse-wheel → horizontal slide (one full page per scroll tick)
+  gallery.addEventListener('wheel', e => {
+    if (e.deltaY === 0 || e.shiftKey) return;
+    const atStart = gallery.scrollLeft <= 0 && e.deltaY < 0;
+    const atEnd   = gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 1 && e.deltaY > 0;
+    if (!atStart && !atEnd) {
+      e.preventDefault();
+      const currentPage = Math.round(gallery.scrollLeft / gallery.clientWidth);
+      const targetPage  = currentPage + (e.deltaY > 0 ? 1 : -1);
+      gallery.scrollTo({ left: targetPage * gallery.clientWidth, behavior: 'smooth' });
+    }
+  }, { passive: false });
+})();
+</script>
