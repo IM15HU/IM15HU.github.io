@@ -26,24 +26,16 @@ Deadband analysis is another important objective. Specifically, we want to chara
 
 - **Brush voltage deadband:** Minimum voltage required to initiate motor rotation.
 
-![brush_vol_graph](brush_vol_dedband.jpeg){width=700}
+![Brush voltage deadband](brush_vol_dedband.jpeg){width=700}
 
 - **Gearbox backlash deadband:** Lost motion during direction reversal due to mechanical play in the gearbox.
 
-![gearbox_backlash_graph](gearbox_dedband.jpeg){width=700}
+![Gearbox backlash deadband](gearbox_dedband.jpeg){width=700}
 
 - **Frictional deadband:** Input required to overcome friction before consistent movement begins.
 
-![frictional_deadband_graph](friction_dedband.jpeg){width=700}
+![Frictional deadband](friction_dedband.jpeg){width=700}
 
-## Test Rig Design
-
-- Designed a modular motor test rig with interchangeable motor mounts and load attachments.
-- Got rid of the previous issues of the first frame, in which the motor was mounted in a different plane to the foil tensioners.
-- Made a rigid joint for the load-cell to get rid of play unlike last time.
-- Investigated frame reinforcement using diagonal bracing.
-
-We plan on using aluminium extrusions for the frame. Everything is built around it. Acrylic sheets are used to make everything else. Standoffs and screws are primarily used.
 
 ## Measurements
 
@@ -189,23 +181,23 @@ The revised platform is designed around aluminium extrusions, with acrylic sheet
 
 ![Version 2 of the Rig](v2_2.jpeg){width=700}
 
-![Version 2 of the Rig](load_cell_weighing.jpeg){width=700}
+![Callibration setup by hanging weights](load_cell_weighing.jpeg){width=700}
 
-![Version 2 of the Rig](load_cell_working_1.png){width=700}
+![Getting torque readings from loadcell](load_cell_working_1.png){width=700}
 
 ## Ongoing Work
 
 The electronics and data acquisition architecture are largely sorted. The remaining hardware integration includes installing the motor encoder and completing load-cell calibration.
 
-![Pretensioned load-cell arrangement.](load_cell_cali_data.png){width=700}
+![Got a equation of Load-cell readings and Actual torque output](load_cell_cali_data.png){width=700}
 
-![Pretensioned load-cell arrangement.](load_cell_cali_graphs.jpeg){width=700}
+![Plots for best fit line](load_cell_cali_graphs.jpeg){width=700}
 
-![Pretensioned load-cell arrangement.](data_aquisition.png){width=700}
+![Multi sensor data acquisition](data_aquisition.png){width=700}
 
-![Pretensioned load-cell arrangement.](motor_in_rig.jpeg){width=700}
+![DC motor mounted in rig](motor_in_rig.jpeg){width=700}
 
-![Pretensioned load-cell arrangement.](bench_with_motor_elec.jpeg){width=700}
+![Test setup with motor and electronics](bench_with_motor_elec.jpeg){width=700}
 
 **Next steps:**
 
