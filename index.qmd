@@ -14,7 +14,7 @@ about:
   template: solana
   image: assets/img/suyash_pfpp.webp
   image-shape: round
-  image-width: 190px
+  image-width: 250px
   links:
     - icon: file-earmark-person
       text: CV

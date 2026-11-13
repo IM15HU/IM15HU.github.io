@@ -1,6 +1,6 @@
 ---
-title: "University Rover Challenge — Mars Rover"
-subtitle: "Team Lead / CTO · Kalki Robotics Club, Plaksha University · Mar 2025 – Feb 2026"
+title: "University Rover Challenge - Mars Rover"
+subtitle: "Team Lead / CTO  Kalki Robotics Club, Plaksha University"
 description: "Led system-level engineering and early prototype integration for a Mars rover, working across communications, low-level control, autonomous mobility, biosciences, and manipulation."
 categories: [Robotics, Systems Engineering]
 start-date: "Mar 2025"

@@ -1,217 +1,222 @@
 ---
 title: "Data-Driven Feedforward Motor Modeling"
 subtitle: "B.Tech Engineering Project"
-description: "Developing an experimentally informed inverse model of a DC motor through synchronized measurements, motor characterization, deadband analysis, and comparisons between lookup tables, neural networks, and physics-informed modeling."
-categories: [Motor Control, Modelling, System Identification]
+description: "Developing an experimentally informed inverse model of a DC motor through synchronized measurements, motor characterization, deadband analysis, and data-driven feedforward control."
+categories: [Motor Control, Modelling, System Identification, Control Systems, Data Acquisition]
 start-date: "Jan 2026"
 end-date: "Present"
 author:
   - name: Suyash Prakash
     url: /
     affiliation: Plaksha University
-
 instructor:
   - name: Prof Andy Lee Ruina
     url: http://ruina.tam.cornell.edu/
 ---
 
-## Project Overview
+## Project Objective
 
-This project investigates how experimental measurements can be used to develop an accurate feedforward model of a DC motor.
+This project develops a test platform to experimentally characterize the custom DC motors and gearboxes used in the RangerMax biped. The platform measures torque, speed, current, voltage and gearbox behavior under dynamic and controlled conditions. The collected data will be used for system identification and development of data-driven motor models for improved controller design, reducing reliance on vendor specifications.
 
-DC motors are widely used in robotics, automation, and electromechanical systems. However, their real-world behaviour is more complicated than a simple relationship between input voltage and output speed.
+## Why Characterization
 
-Factors such as friction, gearbox behaviour, motor loading, deadband, temperature, and differences between increasing and decreasing commands can introduce nonlinearities into the input-output relationship.
+Motor datasheets do not describe transient response, thermal effects, gearbox backlash or parameter variation during operation. Measuring these quantities provides data required for accurate control-oriented models. The end goal is to make a look-up table for the controller.
 
-These effects become important when an actuator must respond predictably to a desired command. A controller may know the output it wants to achieve, but determining the input required to produce that output is not always straightforward.
+Deadband analysis is another important objective. Specifically, we want to characterize three types of deadband:
 
-The objective of this project is to characterize the motor experimentally and develop an inverse feedforward model that can estimate the command required to achieve a desired motor output.
+- **Brush voltage deadband:** Minimum voltage required to initiate motor rotation.
 
-Rather than relying exclusively on an idealized motor equation, the approach uses experimentally acquired data to capture aspects of the real actuator's behaviour.
+![brush_vol_graph](brush_vol_dedband.jpeg){width=700}
 
-## Motivation: Why Model a Motor?
+- **Gearbox backlash deadband:** Lost motion during direction reversal due to mechanical play in the gearbox.
 
-A motor is often treated as an actuator that converts an electrical input into mechanical motion.
+![gearbox_backlash_graph](gearbox_dedband.jpeg){width=700}
 
-In practice, the relationship between the command and the resulting motion depends on several physical effects.
+- **Frictional deadband:** Input required to overcome friction before consistent movement begins.
 
-For example, a motor may not begin rotating until the applied command exceeds a minimum threshold. Once moving, it may behave differently from how it behaves at startup. Changes in load can also alter the output produced by a given command.
+![frictional_deadband_graph](friction_dedband.jpeg){width=700}
 
-A gearbox introduces additional effects, including friction, mechanical play, and backlash.
+## Test Rig Design
 
-These behaviours can make precise positioning and speed control difficult, particularly when the actuator must operate over a broad range of commands and loads.
+- Designed a modular motor test rig with interchangeable motor mounts and load attachments.
+- Got rid of the previous issues of the first frame, in which the motor was mounted in a different plane to the foil tensioners.
+- Made a rigid joint for the load-cell to get rid of play unlike last time.
+- Investigated frame reinforcement using diagonal bracing.
 
-An experimentally derived model can help characterize these effects and provide a better estimate of the input required for a desired output.
+We plan on using aluminium extrusions for the frame. Everything is built around it. Acrylic sheets are used to make everything else. Standoffs and screws are primarily used.
 
-## Feedforward and Inverse Modeling
+## Measurements
 
-The central idea is to develop a mapping between a desired motor output and the input needed to produce it.
+A complete characterization platform allows repeatable measurement of:
 
-A conventional forward model describes the relationship
+- **Torque** → Done using load-cells.
+- **Shaft speed** → Motor encoder before and after gearbox.
+- **Motor current** → Current sensor which is calibrated.
+- **Supply voltage** → Constant given by a bench power supply.
+- **Back EMF** → Voltage sensor before motor (actual motor voltage).
+- **Dynamic response** → Different types of input signals (step, ramp, sine).
+- **Gearbox backlash** → Difference between both encoders.
 
-$$
-y = f(u)
-$$
+These measurements can later be used for system identification and feedforward model development.
 
-where:
+## Electronics and Data Acquisition
 
-- $u$ represents the motor command or input.
-- $y$ represents the resulting motor output.
-- $f$ represents the motor's input-output relationship.
+- **Teensy 4.1** serves as the central data acquisition unit.
+- **Load Cell + HX711 Amplifier** measures output torque.
+  - The load cell connects to the HX711 amplifier.
+  - HX711 communicates with Teensy using digital GPIO pins (Clock and Data).
+  - Better amplifier are to be tested.
+- **Incremental Rotary Encoder** measures shaft position and speed.
+  - Encoder A and B channels connect to Teensy interrupt-capable digital pins.
+  - Hall encoder with diametric magnet will be used before gearbox.
+  - Optical high PPR encoder on output shaft.
+- **Current Sensor with shunt resistor** measures motor current.
+  - Analog voltage output connects to a Teensy ADC module.
+- **Voltage Sensor / Voltage Divider** measures motor supply voltage from driver.
+  - Analog output connects to another Teensy ADC module.
+- **Motor Driver / Power Supply** powers the test motor independently of the Teensy.
+  - The Teensy only measures signals and does not supply motor power.
+- **USB Connection** links the Teensy to the laptop.
+  - Used for power, programming, and high-speed serial communication.
+  - Teensy reads sensor values and does basic computation to give RPM, torque, current, voltage, PWM, etc.
+- **Python Data Acquisition Script** runs on the laptop.
+  - Python script reads serial data from Teensy.
+  - Timestamps and logs synchronized sensor measurements.
+  - Saves the data to CSV files for post-processing.
+  - Display live plots of quantities such as torque, speed, current, and temperature during experiments.
 
-Depending on the experiment, the output may include speed or another measured quantity.
+![Electronics Zero-PCB](electronics.jpeg){width=700}
 
-The inverse model seeks the input required to achieve a desired output:
+## Experimental Plan
 
-$$
-u = f^{-1}(y_{\mathrm{desired}})
-$$
+- Conduct experiments under controlled supply voltage and known mechanical loading conditions.
+- Excite the motor using multiple input signals to capture both steady-state and transient behavior.
+- Planned excitation signals include:
+  - Step PWM inputs.
+  - Ramp PWM inputs.
+  - Sinusoidal PWM inputs of varying frequencies.
+- Perform experiments under different load inertias using interchangeable flywheels.
+- Record synchronized measurements of:
+  - Applied PWM command.
+  - Previous PWM commands (input history).
+  - Motor voltage.
+  - Motor current.
+  - Output torque.
+  - Shaft position.
+  - Shaft speed.
+  - Time stamp.
 
-In a practical system, the relationship may not have a simple analytical inverse. It may also be affected by deadband, hysteresis, measurement noise, or operating conditions.
+- Store the current and previous PWM values with every sample, as motor response depends on past inputs due to electrical and mechanical dynamics. This input history is particularly useful for data-driven system identification and neural-network-based model development.
+- Save all synchronized measurements in CSV format for subsequent system identification, model validation and controller development.
 
-The project therefore investigates data-driven methods for approximating this inverse relationship using experimental measurements.
+## Feedforward Model Development
 
-A feedforward model can then provide an initial command based on the desired output, while a feedback controller can compensate for residual errors and disturbances.
+The primary objective of the characterization platform is to develop a feedforward model that predicts the actuator input required to produce a desired motion. Unlike a feedback controller, which reacts to errors after they occur, a feedforward controller estimates the required motor command directly from the desired operating conditions.
 
-## Experimental Motor Characterization
+The experimental platform developed in this project measures the quantities required to identify these behaviors directly from experimental data. During testing, synchronized measurements of motor voltage, PWM command, current, torque, shaft position, speed, acceleration and temperature are recorded under different operating conditions. The resulting dataset captures both steady-state and transient responses of the actuator.
 
-A major part of the project involves developing an experimental setup capable of acquiring synchronized electromechanical measurements.
+A combined feedforward and feedback control block system merges predictive disturbance compensation (from the model) with reactive error correction (feedback part).
 
-The measurements being investigated include:
+## Data-Driven Feedforward Models
 
-- **Torque:** To characterize the mechanical output produced by the motor.
-- **Speed:** To observe the motor's rotational response under different operating conditions.
-- **Current:** To measure electrical demand and investigate its relationship with load and motor behaviour.
-- **Voltage:** To record the electrical input supplied to the actuator.
-- **Temperature:** To observe thermal changes during operation.
-- **Gearbox backlash:** To investigate mechanical play in the transmission.
+The same dataset can also be used to learn the inverse dynamics of the actuator.
 
-Collecting these measurements together is important because motor behaviour cannot always be understood from a single variable.
+Instead of predicting motor behavior from an input voltage, the model learns the opposite relationship:
 
-For example, a speed measurement alone may not reveal whether a change in performance is associated with an electrical input, a change in load, or a thermal effect.
+**Possible model inputs include:**
 
-Synchronized measurements make it possible to compare variables under corresponding operating conditions.
+- Desired position.
+- Desired velocity.
+- Desired acceleration.
+- Applied load torque.
+- Motor temperature.
+- Previous PWM commands.
+- Previous measured states.
 
-## Instrumentation Design
+**Model outputs may include:**
 
-The instrumentation is being designed to acquire the relevant measurements in a consistent and repeatable way.
+- PWM duty cycle.
+- Required motor voltage (simple PWM ratio-ing to give PWM output).
+- Required motor current (and then we have current control).
 
-This requires attention not only to the sensors themselves but also to the complete measurement process.
+Including previous PWM commands and previous measured states allows the model to account for actuator memory arising from electrical inductance, rotor inertia and gearbox dynamics. This is important because the current motor output depends not only on the present command but also on recent operating history.
 
-The setup must provide a meaningful relationship between the recorded input and the resulting motor response. Timing, sampling, sensor calibration, and the handling of measurement noise can all affect the usefulness of the collected data.
+For example, 100 RPM while accelerating versus 100 RPM while decelerating would require different PWM to reach a target of 200 RPM within the same time-frame.
 
-The objective is to build an experimental dataset suitable for analyzing the motor's behaviour and training or fitting candidate models.
+The final outcome of this work is a control-oriented feedforward model capable of predicting actuator commands directly from desired motion. Such a model can compensate for nonlinear actuator behavior before tracking errors occur, improving motion accuracy and reducing the effort required from the feedback controller.
 
-The instrumentation stage is therefore a central part of the modeling process rather than a separate preliminary exercise.
+## Design Version 1 — Initial Test Rig
 
-## Deadband and Nonlinear Motor Behaviour
+The first version focused on developing the torque measurement mechanism using load cells.
 
-One of the behaviours being investigated is motor deadband.
+The setup consisted of a central rotating section supported by a frame, with four tensioned aluminium strips. A torque transfering beam was attached to the central section. A pretensioning arrangement was introduced to establish an initial loading condition before conducting measurements.
 
-Deadband refers to a region of the input-command range in which changes in the command produce little or no meaningful output.
+The structure was assembled using laser-cut acrylic components, mounting blocks, fasteners and custom supports. 
 
-For a motor, this may occur because the applied input is insufficient to overcome the combined effects of static friction, gearbox friction, and other mechanical or electrical limitations.
+It served as a proof-of-concept for the tensioning mechanism.
 
-The precise threshold can depend on operating conditions, including the load and the direction of motion.
+**Key design elements:**
 
-Identifying deadband is important because an inverse model cannot reliably predict an output if it assumes that every small command produces a proportional response.
+- Four tensioned aluminium aluminium strips keep the central section restricted.
+- Cantilever-based load-cell design.
+- Pretensioning mechanism to establish the initial load.
 
-The experimental workflow therefore includes investigating the minimum effective command and characterizing the motor's response across the input range.
+![Proof of concept](v1_proof_of_concept.jpeg){width=700}
 
-## Candidate Modeling Approaches
+![Setup](v1_working.jpeg){width=700}
 
-The project investigates and compares multiple approaches to constructing the inverse model.
+![Attched to workbench](v1_2.jpeg){width=700}
 
-### 1. Lookup Tables
+![Load-cell pretensioning.](load_cell_preten_2.jpeg){width=700}
 
-A lookup table represents experimentally measured relationships as a collection of input-output pairs.
+![Load-cell in action](load_cell_preten_1.jpeg){width=700}
 
-To estimate a command for a desired output, the model can use measured data points and an appropriate interpolation strategy.
+## Design Version 2 — Revised Test Rig
 
-Lookup tables are useful when the measured relationship is nonlinear but can be sampled sufficiently densely.
+The second version addresses the mechanical limitations identified in the first design.
 
-Their advantages include simplicity, interpretability, and relatively low computational cost.
+The motor and foil tensioners are now arranged in the same plane to ensure proper alignment of the loading mechanism. The load-cell connection has also been redesigned as a rigid joint to eliminate unwanted mechanical play.
 
-Their limitations include dependence on data coverage and the need to handle operating regions that were not measured directly.
+The revised platform is designed around aluminium extrusions, with acrylic sheets, standoffs and screws used for mounting the remaining components.
 
-### 2. Neural Networks
+**Key improvements:**
 
-Neural networks can learn nonlinear relationships from experimental data.
+- Improved alignment between the motor and foil tensioners.
+- Rigid load-cell connection to eliminate mechanical play.
+- Modular motor mounts and interchangeable load attachments.
+- Aluminium extrusion-based frame.
+- Investigation of diagonal bracing for improved structural rigidity.
 
-For this project, a neural network may be used to approximate the mapping from a desired motor output to the required command.
+![Version 2 of the Rig](v2_2.jpeg){width=700}
 
-The usefulness of this approach depends on the quality and coverage of the dataset, the model architecture, and the training procedure.
+![Version 2 of the Rig](load_cell_weighing.jpeg){width=700}
 
-A neural network may capture complex relationships, but it can also behave unpredictably outside the operating conditions represented in the training data.
+![Version 2 of the Rig](load_cell_working_1.png){width=700}
 
-### 3. Physics-Informed Machine Learning
+## Ongoing Work
 
-Physics-informed approaches combine experimental observations with knowledge of the underlying physical system.
+The electronics and data acquisition architecture are largely sorted. The remaining hardware integration includes installing the motor encoder and completing load-cell calibration.
 
-For motor modeling, this can provide a way to incorporate known electromechanical relationships while allowing the model to represent behaviour that is difficult to capture with a simple analytical equation.
+![Pretensioned load-cell arrangement.](load_cell_cali_data.png){width=700}
 
-The objective is to investigate whether incorporating physical knowledge can improve the accuracy, consistency, or generalization of the inverse model.
+![Pretensioned load-cell arrangement.](load_cell_cali_graphs.jpeg){width=700}
 
-## Model Evaluation
+![Pretensioned load-cell arrangement.](data_aquisition.png){width=700}
 
-The candidate approaches need to be evaluated using consistent experimental data and comparable performance measures.
+![Pretensioned load-cell arrangement.](motor_in_rig.jpeg){width=700}
 
-Important questions include:
+![Pretensioned load-cell arrangement.](bench_with_motor_elec.jpeg){width=700}
 
-- How accurately does the model predict the command required for a desired output?
-- How does its accuracy vary across the operating range?
-- Can it represent the motor's deadband and nonlinear response?
-- How well does it generalize to measurements not used during model fitting?
-- How much computation is required to evaluate the model?
-- How reliably can it be used in a real control system?
+**Next steps:**
 
-A model that fits the training measurements well is not necessarily the most useful model for control. It must also behave sensibly across the intended operating range and be practical to implement.
-
-The final choice should therefore consider both predictive accuracy and suitability for real-time control.
-
-## Intended Application
-
-The intended outcome is an inverse feedforward model that can provide a useful motor command for a desired output.
-
-Such a model could be used alongside a feedback controller in a robotic actuator or positioning mechanism.
-
-The feedforward component would estimate the command required to achieve the target, while feedback would correct errors arising from disturbances, model inaccuracies, and changing operating conditions.
-
-The effectiveness of this approach will depend on the model's accuracy and the operating conditions under which it is used.
-
-## Current Status and Future Work
-
-The project is ongoing.
-
-The current work focuses on developing the instrumentation, acquiring synchronized measurements, investigating motor deadband, and comparing candidate data-driven modeling techniques.
-
-The next stages involve completing the experimental dataset, fitting and evaluating the candidate models, comparing their performance, and investigating their use in a control application.
-
-## Key Technical Areas
-
-- Experimental system identification
-- DC motor characterization
-- Electromechanical instrumentation
-- Data acquisition and synchronization
-- Nonlinear system modeling
-- Deadband and gearbox backlash analysis
-- Inverse modeling and feedforward control
-- Lookup tables, neural networks, and physics-informed approaches
-
-## What I Aim to Learn
-
-This project connects physical experimentation with mathematical modeling and control engineering.
-
-It provides an opportunity to investigate how real actuator behaviour can be measured, represented mathematically, and used to improve the performance of a control system.
-
-The broader objective is to develop a modeling workflow in which experimental evidence, physical understanding, and data-driven techniques complement one another.
-
-<!-- Suggested images:
-![Motor characterization test rig](motor-test-rig.webp){width=700}
-![Instrumentation and measurement setup](motor-instrumentation.webp){width=700}
-![Example synchronized measurement traces](motor-measurements.webp){width=700}
-![Comparison of candidate inverse models](inverse-model-comparison.webp){width=700}
--->
+- Complete the revised test rig.
+- Integrate and calibrate the motor encoders.
+- Calibrate load cells and current/voltage sensors.
+- Validate synchronized data acquisition.
+- Conduct step, ramp and sinusoidal PWM experiments.
+- Characterize the three deadband effects.
+- Develop and compare lookup-table, LSTM-based and physics-informed models.
+- Evaluate the feedforward model alongside a feedback controller.
 
 ## Gallery
 

@@ -1,9 +1,9 @@
 ---
-title: "CanSat 2025 — Mechanical Design and Integration"
+title: "CanSat 2025 - Mechanical Design and Integration"
 subtitle: "Mechanical Lead | Kalki Robotics Club"
 description: "Led mechanical design for a CanSat competition entry, designing the satellite body, internal structure, and autogyro blades in Fusion 360. The team achieved a 92.4% Preliminary Design Review score."
-categories: [Mechanical Design, CAD]
-start-date: "Oct 2024"
+categories: [Mechanical Design, CAD, Competition]
+start-date: "Aug 2024"
 end-date: "Feb 2025"
 author:
   - name: Suyash Prakash

@@ -2,9 +2,9 @@
 # The homepage listing (index.qmd) points its `contents:` at this file
 # instead of globbing projects/*/index.qmd, so re-ordering or hiding a
 # project is a one-line change here rather than touching dates.
+- path: equinox/index.qmd
+- path: urc-2026/index.qmd
 - path: motor-model/index.qmd
 - path: tether/index.qmd
 - path: torsion-rigidity/index.qmd
-- path: urc-2026/index.qmd
-- path: equinox/index.qmd
 - path: cansat-2025/index.qmd

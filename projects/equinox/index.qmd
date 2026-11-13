@@ -1,10 +1,10 @@
 ---
-title: "Equinox — FPV Drone Frame Design"
-subtitle: "Independent Engineering Project · Oct 2022 – Oct 2025"
+title: "Equinox - FPV Drone Frame Design"
+subtitle: "Independent Engineering Project | Meteor Dynamics"
 description: "Designed and commercialized a custom T300 carbon-fibre FPV drone frame, focusing on mechanical rigidity, vibration isolation, lightweight construction, flight performance, and manufacturability."
 categories: [Mechanical Design, Hardware, Product Development]
 start-date: "Oct 2022"
-end-date: "Oct 2024"
+end-date: "Feb 2024"
 author:
   - name: Suyash Prakash
     url: /
