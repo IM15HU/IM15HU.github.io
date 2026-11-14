@@ -13,6 +13,7 @@ instructor:
   - name: Prof Andy Lee Ruina
     url: http://ruina.tam.cornell.edu/
 ---
+Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
 
 ## Project Objective
 
@@ -221,24 +222,66 @@ The electronics and data acquisition architecture are largely sorted. The remain
 <script>
 (function () {
   const images = [
-    "1000000212.jpeg",
-    "1000000290.jpeg",
-    "1000000293.jpeg",
-    "1000001049.jpg",
-    "1000001050.jpg",
-    "1000001055.jpg",
-    "1000001056.jpg"
+    "bench_with_motor_elec.jpeg",
+    "brush_vol_dedband.jpeg",
+    "data_aquisition.png",
+    "electronics.jpeg",
+    "friction_dedband.jpeg",
+    "gearbox_dedband.jpeg",
+    "load_cell_cali_data.png",
+    "load_cell_cali_graphs.jpeg",
+    "load_cell_preten_1.jpeg",
+    "load_cell_preten_2.jpeg",
+    "load_cell_weighing.jpeg",
+    "load_cell_working_1.png",
+    "motor_in_rig.jpeg",
+    "v1_2.jpeg",
+    "v1_3.jpeg",
+    "v1_assembly.jpeg",
+    "v1_proof_of_concept.jpeg",
+    "v1_working.jpeg",
+    "v2_1.png",
+    "v2_2.jpeg",
+    "v2_3.jpeg",
+    "v2_4.jpeg",
+    "v2_5.jpeg",
+    "v2_6.jpeg",
+    "v2_7.jpeg",
+    "v2_8.jpeg",
+    "v2_9.jpeg",
+    "v2_10.jpeg"
   ];
 
   /* noscript fallbacks so Quarto's resource scanner sees the files */
   /* noscript:
-    gallery_imgs/1000000212.jpeg
-    gallery_imgs/1000000290.jpeg
-    gallery_imgs/1000000293.jpeg
-    gallery_imgs/1000001049.jpg
-    gallery_imgs/1000001050.jpg
-    gallery_imgs/1000001055.jpg
-    gallery_imgs/1000001056.jpg
+    gallery_imgs/bench_with_motor_elec.jpeg
+    gallery_imgs/brush_vol_dedband.jpeg
+    gallery_imgs/data_aquisition.png
+    gallery_imgs/electronics.jpeg
+    gallery_imgs/friction_dedband.jpeg
+    gallery_imgs/gearbox_dedband.jpeg
+    gallery_imgs/load_cell_cali_data.png
+    gallery_imgs/load_cell_cali_graphs.jpeg
+    gallery_imgs/load_cell_preten_1.jpeg
+    gallery_imgs/load_cell_preten_2.jpeg
+    gallery_imgs/load_cell_weighing.jpeg
+    gallery_imgs/load_cell_working_1.png
+    gallery_imgs/motor_in_rig.jpeg
+    gallery_imgs/v1_2.jpeg
+    gallery_imgs/v1_3.jpeg
+    gallery_imgs/v1_assembly.jpeg
+    gallery_imgs/v1_proof_of_concept.jpeg
+    gallery_imgs/v1_working.jpeg
+    gallery_imgs/v2_1.png
+    gallery_imgs/v2_2.jpeg
+    gallery_imgs/v2_3.jpeg
+    gallery_imgs/v2_4.jpeg
+    gallery_imgs/v2_5.jpeg
+    gallery_imgs/v2_6.jpeg
+    gallery_imgs/v2_7.jpeg
+    gallery_imgs/v2_8.jpeg
+    gallery_imgs/v2_9.jpeg
+    gallery_imgs/v2_10.jpeg
   */
 
   const PER_PAGE = 4; // 2x2

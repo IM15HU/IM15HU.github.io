@@ -19,6 +19,8 @@ instructor:
 [<i class="bi bi-file-earmark-pdf"></i> Report](/assets/files/torsion.pdf)
 :::
 
+Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
+
 ## Project Overview
 
 We conducted an experimental investigation to quantify the effect of diagonal bracing on the torsional stiffness of a structural assembly. The objective was to understand how introducing diagonal members and triangulating a structure influences its resistance to twisting under an applied torque.

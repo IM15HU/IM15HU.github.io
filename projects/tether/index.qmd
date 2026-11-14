@@ -19,6 +19,8 @@ instructor:
 [<i class="bi bi-file-earmark-pdf"></i> Report](/assets/files/tether.pdf)
 :::
 
+Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
+
 ## Project Overview
 
 The objective of this project was to investigate whether an elevated payload could be maintained at a spatially constrained position using a tensioned tether system, without requiring GPS-based positional control of the aerial platform.
