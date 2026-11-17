@@ -14,17 +14,17 @@ instructor:
   - name: Prof Shashank Tamaskar
     url: https://www.linkedin.com/in/shashank-tamaskar-67a2b919/
 ---
-Instructor: [Prof. Shashank Tamaskar](https://www.linkedin.com/in/shashank-tamaskar-67a2b919/)
+## Instructor: [Prof. Shashank Tamaskar](https://www.linkedin.com/in/shashank-tamaskar-67a2b919/)
 
 ## Project Overview
 
-CanSat 2025 was my first major engineering project in college and Plaksha University's first participation in an international robotics competition. Our team consisted primarily of first- and second-year students.
+[CanSat 2025](https://cansatcompetition.com/docs/CanSat_Mission_Guide_2025b.pdf) was my first major engineering project in college and Plaksha University's first participation in an international robotics competition. Our team consisted primarily of first- and second-year students.
 
-I served as the **Head of Mechanical Design**, spending most of my time developing CAD models and mechanical assemblies in Fusion 360. This was my first exposure to multidisciplinary engineering projects, formal design reviews, and designing within strict competition constraints.
+I served as the **Head of Mechanical Design** of our team - [Team Kalki](https://www.linkedin.com/company/team-kalki/posts/), spending most of my time developing CAD models and mechanical assemblies in Fusion 360. This was my first exposure to multidisciplinary engineering projects, formal design reviews, and designing within strict competition constraints.
 
 ## Problem Statement — Auto Gyro Descender
 
-The 2025 AAS CanSat competition challenged teams to develop a miniature satellite with a two-stage descent mechanism.
+The 2025 AAS [CanSat competition](https://www.cansatcompetition.com/) challenged teams to develop a miniature satellite with a two-stage descent mechanism.
 
 - **Rocket ascent:** The CanSat acts as the rocket's nose cone.
 - **Initial descent:** Following ejection, the CanSat descends under a parachute at approximately 20 m/s.
@@ -89,7 +89,7 @@ I subsequently mentored Plaksha University's team participating in CanSat 2026, 
 
 The team secured **3rd place in India with a score of 95.4%**.
 
-This was a rewarding opportunity to contribute to the next generation of students and help build upon the experience of the previous team.
+This was a rewarding opportunity to contribute to the next batch of students and help build upon the experience of the previous team.
 
 ## PDR
 

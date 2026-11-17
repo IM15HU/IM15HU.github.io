@@ -13,7 +13,7 @@ instructor:
   - name: Prof Andy Lee Ruina
     url: http://ruina.tam.cornell.edu/
 ---
-Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
+## Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
 
 ## Project Objective
 

@@ -8,30 +8,31 @@ end-date: "Present"
 author:
   - name: Suyash Prakash
     url: /
-    affiliation: Independent
+    affiliation: Independent During High School
 ---
 
 ## Overview
 
-What started as an interest in remote-controlled aircraft gradually became my introduction to engineering. Building RC planes and experimenting with FPV drones introduced me to mechanical design, fabrication, electronics, aerodynamics, and control systems. Over time, I moved from assembling off-the-shelf components to designing custom aircraft structures, configuring flight controllers, analysing flight data, and helping others build and optimize their drones.
+What started as an interest in remote-controlled aircraft druing my early high school years, gradually became my introduction to engineering. Building RC planes and experimenting with FPV drones introduced me to mechanical design, fabrication, electronics, aerodynamics, and control systems. Over time, I moved from assembling off-the-shelf components to designing custom aircraft structures, configuring flight controllers, analysing flight data, and helping others build and optimize their drones.
 
 This journey gave me an opportunity to explore engineering through hands-on experimentation. It was where I first started working with CAD, 3D printing, embedded electronics, and practical control systems. What began as a hobby eventually developed into an interest in designing and building complete engineering systems.
 
 ## 3D Printing and Rapid Prototyping
 
-I was introduced to 3D printing through my early experiments with RC aircraft. It fundamentally changed how I approached building things. Instead of relying entirely on commercially available components, I could design custom parts, fabricate them, and iterate on the physical design myself.
+I was introduced to 3D printing in 9th grade. It fundamentally changed how I approached building things. Instead of relying entirely on commercially available components, I could design custom parts, fabricate them, and iterate on the physical design myself.
 
 ![3D printed wing ribs](3d_print_1.jpg){width=700}
 
 ![My 3D printer](3D_print_2.jpg){width=700}
 
-This led me to explore CAD and digital fabrication, developing an understanding of how a digital model translates into a physical component. I began experimenting with different geometries, mounting arrangements, and structural designs, using 3D printing as a rapid prototyping tool. This was also my introduction to the broader design-for-manufacturing workflow, where mechanical constraints and fabrication limitations influence the design itself.
+This led me to explore CAD and digital fabrication, developing an understanding of how a digital model translates into a physical component. 
+I began experimenting with different geometries, mounting arrangements, and structural designs, using 3D printing as a rapid prototyping tool. 
 
 
 
 ## RC Fixed-Wing Aircraft
 
-My initial experience with RC aircraft involved building and flying fixed-wing models. This was my first real exposure to aircraft design and the engineering considerations behind making an aircraft fly.
+My initial experience with RC aircraft involved building and flying fixed-wing models.. This was my first real exposure to aircraft design and the engineering considerations behind making an aircraft fly. 
 
 ![Early RC fixed-wing aircraft build](fixed_wing_1.jpg){width=700}
 
@@ -44,6 +45,8 @@ I began exploring different airframe configurations, propulsion arrangements, co
 I used CAD to develop and modify mechanical components for my builds, initially working with FreeCAD before transitioning to Autodesk Fusion 360. This gave me the ability to design custom parts, experiment with structural geometries, and develop components that could be fabricated and integrated into my aircraft.
 
 ![First ever design which didnt even fly](fixed_wing_4.jpg){width=700}
+
+I started making my own airframes in early 9th grade. It wasnt until 10th grade that my aiframes started to fly reliably.
 
 ## FPV Drones — Building, Flying and Tuning
 
@@ -63,11 +66,11 @@ I also began using **Blackbox logging and PIDToolbox** to analyse flight data, i
 
 Building FPV aircraft also introduced me to RF communications and video transmission systems. I gained practical experience with RC receivers, transmitters, video transmitters (VTXs), antennas, polarization, and different frequency bands used for control and video links. Understanding antenna selection, placement, and signal quality became an important part of configuring reliable FPV systems.
 
-As I gained experience, I also started helping other pilots with their builds and configurations. I worked as an independent FPV consultant, assisting people with component selection, aircraft assembly, troubleshooting, Betaflight configuration, and PID tuning. I also mentored beginners in understanding flight-controller behaviour and improving their aircraft through systematic tuning.
+As I gained experience, I also started helping other pilots with their builds and configurations either on discord and other online communities as well as in person. I worked as an independent FPV consultant, assisting people with component selection, aircraft assembly, troubleshooting, Betaflight configuration, and PID tuning. I also mentored beginners in understanding flight-controller behaviour and improving their aircraft through systematic tuning.
 
 ## Custom FPV Frame Design
 
-As my experience with FPV aircraft grew, I became increasingly interested in designing the frames themselves rather than relying entirely on commercially available options. I started experimenting with frame geometries, structural layouts, component mounting, and material selection, using CAD to develop custom airframes.
+As my experience with FPV aircraft grew, I became increasingly interested in designing the frames themselves rather than relying entirely on commercially available options. During my 11th grade along with my JEE preperation, I started experimenting with frame geometries, structural layouts, component mounting, and material selection, using CAD to develop custom airframes.
 
 ![Custom FPV frame CAD design](cad_frame.png){width=700}
 
@@ -75,11 +78,11 @@ One of these projects involved designing a **5-inch lightweight FPV frame for ra
 
 ![5-inch lightweight racing frame](5inch_lw.jpg){width=700}
 
-My experimentation with custom frame design eventually led to the development of **Equinox**, a carbon-fibre FPV frame that I independently designed, patented, and commercialized. Equinox is documented as a separate project in my portfolio.
+My experimentation with custom frame design eventually led to the development of **Equinox**, a carbon-fibre FPV frame that I independently designed, patented, and commercialized. Equinox is documented as a separate project in my portfolio.[More Info](https://im15hu.github.io/projects/equinox/).
 
 ## Looking Back
 
-This journey was my introduction to engineering as something that could be explored through building, experimentation, and iteration. It taught me to approach problems from the perspective of the complete system. An aircraft is not simply a collection of motors and electronics; its mechanical structure, propulsion, sensing, communications, and control systems are all interconnected.
+This journey was my introduction to engineering as something that could be explored through building, experimentation, and iteration. It taught me to approach problems from the perspective of the complete system. An aircraft is not simply a collection of motors and electronics; its mechanical structure, propulsion, sensing, communications, and control systems are all interconnected. Moreover it introduced me to control systems which was a natural extension of my interest in mathematics and physics. I learned to approach problems analytically, using data and system response to inform design decisions.
 
 It also introduced me to the satisfaction of designing something digitally, fabricating it, assembling the hardware, and seeing it work in the real world. What started as a hobby eventually developed into a deeper interest in mechanical design, mechatronics, flight dynamics, and control engineering — areas that continue to shape the engineering projects I pursue today.
 

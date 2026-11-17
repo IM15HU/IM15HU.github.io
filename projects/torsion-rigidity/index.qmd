@@ -19,7 +19,7 @@ instructor:
 [<i class="bi bi-file-earmark-pdf"></i> Report](/assets/files/torsion.pdf)
 :::
 
-Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
+## Instructor: [Prof. Andy Lee Ruina](http://ruina.tam.cornell.edu/)
 
 ## Project Overview
 

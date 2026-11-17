@@ -16,7 +16,7 @@ author:
 
 ## Project Overview
 
-Equinox was an independent engineering project through which I designed, developed, and commercialized a custom carbon-fibre frame for FPV freestyle drones. The project combined my experience as an FPV pilot with my interests in mechanical design, structural engineering, and product development.
+Equinox was an independent engineering project I took up in my 11th and 12th grades, through which I designed, developed, and commercialized a custom carbon-fibre frame for FPV freestyle drones. The project combined my experience as an FPV pilot with my interests in mechanical design, structural engineering, and product development.
 
 The idea originated from my dissatisfaction with commercially available FPV frames. Most frames available in the Indian market were imported, expensive, and often prioritized durability, aesthetics, and compatibility over flight performance. Having spent considerable time building, flying, and tuning FPV drones, I had a fairly good understanding of the mechanical limitations that could affect an aircraft's behaviour.
 
@@ -150,7 +150,7 @@ The development process involved multiple iterations of the frame, with manufact
 
 ## Product Development and Commercialization
 
-Equinox eventually progressed beyond a personal engineering project into a commercial product.
+Equinox eventually progressed beyond a personal engineering project into a commercial product which I solde under the brand [Meteor Dynamics](https://meteordynamics.in).
 
 I coordinated the manufacturing of the final carbon-fibre frames in China and introduced the product to the Indian FPV market. The final frame had an approximate carbon-fibre weight of 100 g and an assembled hardware weight of 115 g.
 
@@ -179,6 +179,8 @@ It taught me that a successful mechanical design is not simply one that looks go
 More importantly, my experience as an FPV pilot allowed me to approach the problem from a practical perspective. I could connect mechanical design decisions to observable flight behaviour and use flight-controller data to investigate problems that would otherwise be difficult to diagnose.
 
 The project strengthened my interest in mechanical design, structural engineering, and the interaction between physical systems and control systems. It also gave me the confidence to take an independently developed hardware product from an idea to a commercially available product.
+
+This project was instrumental in getting into Plaksha University, where I am currently pursuing a degree in Robotics and Autonmous Systems.
 
 ## Gallery
 

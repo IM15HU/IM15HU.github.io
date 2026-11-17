@@ -1,6 +1,6 @@
 ---
 title: "University Rover Challenge — Mars Rover"
-subtitle: "Team Lead / CTO · Kalki Robotics Club, Plaksha University"
+subtitle: "Team Lead / CTO | Kalki Robotics Club, Plaksha University"
 description: "Led the development of a Mars rover across mechanical, electronics, embedded systems, communications, and autonomy, while building and mentoring a multidisciplinary student engineering team."
 categories: [Robotics, Systems Engineering, Autonomous Systems]
 start-date: "Mar 2025"
@@ -15,11 +15,11 @@ instructor:
     url: https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/
 ---
 
-Instructor: [Prof. Deepan Muthirayan](https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/)
+## Instructor: [Prof. Deepan Muthirayan](https://www.linkedin.com/in/deepan-raj-prabakar-muthirayan-a0143728/)
 
 ## Problem Statement
 
-The **University Rover Challenge (URC)** is an international robotics competition organized by **The Mars Society**. It challenges university teams to design, build, and operate a rover capable of assisting future astronauts on the surface of Mars. Widely regarded as one of the most demanding university-level rover competitions, URC tests not just whether a robot can move, but whether it can operate as a complete autonomous and remotely supervised field system.
+The [University Rover Challenge (URC)](https://urc.marssociety.org/) is an international robotics competition organized by The Mars Society. It challenges university teams to design, build, and operate a rover capable of assisting future astronauts on the surface of Mars. Widely regarded as one of the most demanding university-level rover competitions, URC tests not just whether a robot can move, but whether it can operate as a complete autonomous and remotely supervised field system.
 
 The competition takes place in the Mars Desert Research Station (MDRS) in Utah, where teams must develop rovers capable of navigating rugged desert terrain and completing a series of mission-specific tasks. The challenge brings together mechanical engineering, electronics, embedded systems, computer vision, communications, control theory, and autonomous robotics.
 
@@ -34,7 +34,7 @@ The challenge is to develop a single integrated platform capable of performing a
 
 ## Building the Team
 
-Following our experience at **CanSat 2025**, a few members of the original team decided to take on the much larger challenge of building a Mars rover for URC. We established the team under the **Kalki Robotics Club** at Plaksha University and began recruiting students to develop the platform.
+Following our experience at **CanSat 2025**, a few members of the original team decided to take on the much larger challenge of building a Mars rover for URC. We established the team under the [Kalki Robotics Club](https://www.linkedin.com/company/team-kalki/posts/) at Plaksha University and began recruiting students to develop the platform.
 
 At the time, our university was relatively young and had very few senior students with prior robotics experience. We recruited a large number of first-year students, many of whom were completely new to robotics and mechatronics. Approximately **80% of the team consisted of juniors**, making training and technical onboarding a major part of the project.
 
@@ -202,7 +202,7 @@ Trevora represented a shift from building an initial proof-of-concept rover to d
 
 **Rover V2 — Trevora Demonstration**
 
-![Rover V2 - Trevora](trevora.jpeg){width=700}
+![Rover V2 - Trevora](travora.jpeg){width=700}
 
 ## Competition Progress
 
