@@ -150,7 +150,7 @@ The development process involved multiple iterations of the frame, with manufact
 
 ## Product Development and Commercialization
 
-Equinox eventually progressed beyond a personal engineering project into a commercial product which I solde under the brand [Meteor Dynamics](https://meteordynamics.in).
+Equinox eventually progressed beyond a personal engineering project into a commercial product which I sold under the brand [Meteor Dynamics](https://meteordynamics.in).
 
 I coordinated the manufacturing of the final carbon-fibre frames in China and introduced the product to the Indian FPV market. The final frame had an approximate carbon-fibre weight of 100 g and an assembled hardware weight of 115 g.
 

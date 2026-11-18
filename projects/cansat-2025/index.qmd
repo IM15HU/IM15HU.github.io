@@ -91,7 +91,7 @@ The team secured **3rd place in India with a score of 95.4%**.
 
 This was a rewarding opportunity to contribute to the next batch of students and help build upon the experience of the previous team.
 
-## PDR
+## PDR (Preliminary Design Review)
 
 The PDR we submitted is available below.
 

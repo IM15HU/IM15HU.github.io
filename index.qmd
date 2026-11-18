@@ -19,9 +19,6 @@ about:
     - icon: file-earmark-person
       text: CV
       href: assets/files/Suyash_resume_oct2026.pdf
-    - icon: github
-      text: GitHub
-      href: https://github.com/IM15HU
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/suyash-prakash-582597246

@@ -1,0 +1,47 @@
+---
+title: "Bi-copter"
+subtitle: "Personal Project | Work in Progress"
+description: "Developing a custom bicopter with a custom carbon-fibre frame and INAV-based flight control."
+categories: [Aerial Robotics, UAV, Mechanical Design, Flight Control]
+start-date: "June 2026"
+author:
+  - name: Suyash Prakash
+    url: /
+    affiliation: Independent
+---
+
+## Project Overview
+
+An ongoing project to design and build a custom bicopter using two BLDC motors and two servos for thrust vectoring. The project explores the mechanical design and flight-control challenges of stabilising and manoeuvring a two-motor aerial platform.
+
+![Bi-copter](bi-copter.jpeg){width=500}
+
+## Mechanical Design
+
+Designed a lightweight frame using **carbon-fibre tubes**, joined together using custom 3D-printed connectors. Motors are controlled by servos using a linkage mechanism. Refinement of frame structure is still ongoing.
+
+![CAD design](cad.png){width=700}
+
+![Servo Tilt Mechanism](servo_tilt.jpeg){width=500}
+
+## Flight Control
+
+The platform uses a **MicoAir F405 flight controller** running INAV, configured with a bicopter mixer. Initial flight testing has been carried out, with PID tuning and control refinement still ongoing.
+
+![electronics](electronics.jpeg){width=500}
+
+## Video Demonstration
+
+::: {#fig-fp_video}
+
+<video src="old_2.mp4" width="600" autoplay loop muted playsinline></video>
+
+One of the first flight tests with minimal tuning.
+:::
+
+::: {#fig-fp_video}
+
+<video src="old_1.mp4" width="600" autoplay loop muted playsinline></video>
+
+Servos were noisy and jittery causing oscillations.
+:::

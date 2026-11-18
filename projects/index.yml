@@ -5,6 +5,7 @@
 - path: equinox/index.qmd
 - path: motor-model/index.qmd
 - path: urc-2026/index.qmd
+- path: bicopter/index.qmd
 - path: cansat-2025/index.qmd
 - path: tether/index.qmd
 - path: torsion-rigidity/index.qmd
